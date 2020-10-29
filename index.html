@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amicão Petshop</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/images/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/images/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/images/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/images/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/images/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/images/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/images/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/images/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/images/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/images/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/icons/favicon-16x16.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="A mais sofisticada rede de petshops da América Latina"/>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="preload" href="./assets/css/main.css" as="style" />
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="flags"> 
+            <img src="assets/images/icons/flag-brazil.svg" alt="Bandeira do Brasil" />
+            <img src="assets/images/icons/flag-united-states.svg" alt="Bandeira dos Estados Unidos" />
+            <img src="assets/images/icons/flag-spain.svg" alt="Bandeira da Espanha" />
+        </div>
+        <div>
+            <a href="index.html">
+                <img src="assets/images/logo/logo.png" alt="Logo" class="logo" />
+            </a>
+        </div>
+        <div class="overlay">
+            <nav>
+                <div class="menu">
+                    <div class="white">
+                        <img src="./assets/images/icons/close.svg" width="42" height="42" alt="Botão Fechar" class="btn-close" id="btn-close" />
+                    </div>
+                    <hr />
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="aquario.html">Aquários</a></li>
+                        <li><a href="banho-e-tosa.html">Banho e Tosa</a></li>
+                        <li><a href="clinic.html">Clínica</a></li>
+                        <li><a href="hotel.html">Hotel</a></li>
+                        <li><a href="loja.html">Loja</a></li>
+                    </ul>
+                    <hr />
+                    <div class="wrap">
+                        <a href="login.html">
+                            <button type="button" class="btn-login">
+                                <img src="assets/images/icons/cat.svg" width="16" height="16" alt="Gato" />
+                                <span>Login</span>
+                            </button> 
+                        </a>    
+                        <div class="social-icons">
+                            <a href="#">
+                                <img src="./assets/images/icons/youtube.svg" width="35" height="35" alt="Logo Youtube" />
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/icons/facebook.svg" width="35" height="35" alt="Logo Facebook" />
+                            </a>
+                            <a href="#">
+                                <img src="./assets/images/icons/instagram.svg" width="35" height="35" alt="Logo Instagram" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <img src="./assets/images/icons/menu.svg" width="42" height="42" alt="Botão menu" class="btn-menu" id="btn-menu" />
+    </header>
+
+    <main id="home">
+        <section class="banner">
+            <div>
+                <div class="hr">
+                    <h1>Praticidade para Você</h1>
+                    <h2>Conforto para seu Pet</h2>
+                </div>
+                <button type="button">Seja bem-vindo(a)</button>
+            </div>
+            
+        </section>
+        <section class="hotel">
+            <h3 class="title">Hotel para <span class="title_detail">Animais</span></h3>
+            <div>
+                <a href="#prev">
+                    <img src="./assets/images/icons/left-arrow.svg" alt="Esquerda" class="arrow" />
+                </a>
+                <div class="carrosel" class="prev">
+                    <a href="#">
+                        <img src="./assets/images/img/cat.png" alt="Gato" class="img1" />
+                    </a>
+                    <a href="#">
+                        <img src="./assets/images/img/dog_travel.png" alt="Cachorro Viajando" class="img2" />
+                    </a>
+                    <a href="#">
+                        <img src="./assets/images/img/hotel.png" alt="hotel" class="img3" />
+                    </a>
+                </div>
+                <a href="#next" class="next">
+                    <img src="./assets/images/icons/right-arrow.svg" alt="Direita" class="arrow" />
+                </a>
+            </div>
+            <div class="background_banner">
+                <img src="./assets/images/img/fundo_banner_text.png" alt="fundo Texto">
+                <div class="square">
+                    <h4 class="title_banner">Seu pet merece esse conforto né?</h4>
+                    <p class="text_banner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <a href="hotel.html" class="btn-pink">Ver +</a>
+                </div>
+            </div>
+        </section>
+        <section class="banho_tosa">
+            <div class="background_tosa">
+                <img src="./assets/images/img/outdoor.png" alt="Cachorro no Cabeleleiro">
+                <div class="background_color"></div>
+            </div>
+            <div class="content_tosa">
+                <div>
+                    <h3 class="title">Banho e <span class="title_detail">Tosa</span></h3>
+                    <p class="text_tosa">Com um tratamento vip desses, nem preciso falar mais nada né hehehe!</p>
+                </div>
+                <a href="banho-e-tosa.html" class="btn-pink-2">Tratamento VIP+</a>
+                <a href="banho-e-tosa.html" class="btn-pink">Ver +</a>
+            </div>
+        </section>
+        <section class="store">
+            <div class="background_store"></div>
+            <h3 class="title">Produtos <span class="title_detail">Exclusivos</span></h3>
+            <div class="background_banner">
+                <img src="./assets/images/img/fundo_banner_text.png" alt="fundo Texto">
+                <div class="square">
+                    <h4 class="title_banner">Que fofura!!</h4>
+                    <p class="text_banner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                </div>
+            </div>
+            <a href="loja.html" class="btn-pink">Ver +</a>
+            <div class="store_products">
+                <img src="./assets/images/img/store.png" alt="produtos">
+            </div>
+            <a href="loja.html" class="btn-pink2">Conheça nossa loja</a>
+        </section>
+        <section class="aquarius">
+            <div class="background_aquarius"></div>
+            <img src="./assets/images/img/aquarius.png" alt="Auário Banheiro">
+            <h3 class="title">Nossos <span class="title_detail">Aquários</span></h3>
+            <div class="background_banner">
+                <img src="./assets/images/img/fundo_banner_text.png" alt="fundo Texto">
+                <div class="square">
+                    <h4 class="title_banner">Sofisticação e conforto</h4>
+                    <p class="text_banner">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                    <a href="aquario.html" class="btn-pink">Ver +</a>
+                </div>
+            </div>
+        </section>
+        <section class="address">
+            <div class="background_address"></div>
+            <h3 class="title">Nossas <span class="title_detail">Lojas</span></h3>
+            <div>
+                <div class="address_1">
+                    <img src="./assets/images/img/sede1.png" alt="Sede Jardins">
+                    <div class="background_banner">
+                        <img src="./assets/images/img/fundo_banner_text.png" alt="fundo Texto">
+                        <div class="square">
+                            <h4 class="title_banner">Jardins - SP</h4>
+                            <p class="text_banner">Localizado:</p>
+                            <p class="text_banner">Rua fulano de Tal, 12345</p>
+                            <p class="text_banner">Região do Jardins</p>
+                            <p class="text_banner">São Paulo</p>
+                            <p class="text_banner">Tel: (00) 0000-0000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address_2">
+                    <img src="./assets/images/img/sede2.png" alt="Sede Campinas">
+                    <div class="background_banner">
+                        <img src="./assets/images/img/fundo_banner_text.png" alt="fundo Texto">
+                        <div class="square">
+                            <h4 class="title_banner">Campinas - SP</h4>
+                            <p class="text_banner">Localizado:</p>
+                            <p class="text_banner">Rua fulano de Tal, 12345</p>
+                            <p class="text_banner">Bairro Centro</p>
+                            <p class="text_banner">Campinas</p>
+                            <p class="text_banner">Tel: (00) 0000-0000</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="space"></section>
+    </main>
+
+    <footer id="footer">
+        <div>
+            <div class="ssl">
+                <img src="./assets/images/icons/ssl.svg" width="37" height="50" alt="Segurança do Site" />
+            </div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <Span class="title">Links</Span>
+                    </li>
+                    <li><a href="./clinic.html">CLINICA</a></li>
+                    <li><a href="./hotel.html">HOTEL</a></li>
+                    <li><a href="./loja.html">LOJA</a></li>
+                    <li><a href="./banho-e-tosa.html">BANHO E TOSA</a></li>
+                    <li><a href="./aquario.html">AQUÁRIOS</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo/logo.png" width="68" height="81" alt="Logo" />
+                </a>
+            </div>
+            <div class="sociais-icon">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="51.42" height="51.42" viewBox="0 0 40.25 40.25"><path d="M25.676,50.467h1.6v8.667h1.515V50.467h1.631v-1.42H25.676Z" transform="translate(-15.109 -28.876)" fill="#f227ae"/><path d="M52.742,51.526a1.843,1.843,0,0,0-1.408.815V49.046H49.973V59.133h1.362v-.728a1.857,1.857,0,0,0,1.408.832,1.078,1.078,0,0,0,1.088-.845,5.984,5.984,0,0,0,.138-1.515V53.885a5.773,5.773,0,0,0-.138-1.51A1.077,1.077,0,0,0,52.742,51.526Zm-.136,5.459c0,.679-.2,1.014-.593,1.014a.971.971,0,0,1-.679-.335V53.083a.978.978,0,0,1,.679-.332c.393,0,.593.348.593,1.026Z" transform="translate(-29.404 -28.875)" fill="#f227ae"/><path d="M40.2,61.012c-.3.427-.588.637-.861.637-.182,0-.286-.107-.319-.319a4.206,4.206,0,0,1-.012-.529V55.268H37.643V61.21a3.831,3.831,0,0,0,.12,1.118.837.837,0,0,0,.877.56,2.182,2.182,0,0,0,1.557-.923v.82H41.56V55.268H40.2Z" transform="translate(-22.149 -32.53)" fill="#f227ae"/><path d="M45.72,30.938c.443,0,.656-.352.656-1.054V26.689c0-.7-.213-1.053-.656-1.053s-.657.35-.657,1.053v3.195C45.063,30.587,45.276,30.938,45.72,30.938Z" transform="translate(-26.51 -15.086)" fill="#f227ae"/><path d="M20.125,0A20.125,20.125,0,1,0,40.25,20.125,20.125,20.125,0,0,0,20.125,0Zm2.238,9.413h1.367v5.572a3.229,3.229,0,0,0,.016.533c.03.212.138.321.322.321.274,0,.562-.212.866-.642V9.413h1.371v7.568H24.935v-.825a2.2,2.2,0,0,1-1.567.929.842.842,0,0,1-.884-.562,3.824,3.824,0,0,1-.121-1.125V9.413Zm-5.179,2.468a2.941,2.941,0,0,1,.429-1.783,2.034,2.034,0,0,1,3.2,0,2.972,2.972,0,0,1,.425,1.783v2.65a2.962,2.962,0,0,1-.425,1.78,2.036,2.036,0,0,1-3.2,0,2.931,2.931,0,0,1-.429-1.78ZM13.517,6.825l1.08,3.988,1.037-3.988h1.538l-1.829,6.043v4.113h-1.52V12.868a25.012,25.012,0,0,0-.93-3.213c-.32-.943-.654-1.888-.975-2.83h1.6ZM30.959,30.908a2.837,2.837,0,0,1-2.427,2.206,75.423,75.423,0,0,1-8.408.311,75.42,75.42,0,0,1-8.408-.311,2.835,2.835,0,0,1-2.427-2.206A24.021,24.021,0,0,1,8.9,25.6a24.05,24.05,0,0,1,.4-5.308,2.835,2.835,0,0,1,2.426-2.206,75.43,75.43,0,0,1,8.409-.311,75.423,75.423,0,0,1,8.408.311,2.838,2.838,0,0,1,2.428,2.206,24.1,24.1,0,0,1,.388,5.308A24.022,24.022,0,0,1,30.959,30.908Z" fill="#f227ae"/><path d="M64.257,55.046a1.934,1.934,0,0,0-1.631.77,2.931,2.931,0,0,0-.421,1.771V60.22a2.9,2.9,0,0,0,.438,1.767,1.949,1.949,0,0,0,1.648.77,1.883,1.883,0,0,0,1.646-.815,1.94,1.94,0,0,0,.318-.816c.013-.136.029-.438.029-.878v-.2H64.9a8.918,8.918,0,0,1-.03.922.585.585,0,0,1-.609.546c-.468,0-.7-.347-.7-1.042V59.143h2.724V57.586a2.954,2.954,0,0,0-.422-1.771A1.891,1.891,0,0,0,64.257,55.046Zm.666,2.964H63.561v-.7q0-1.043.684-1.043c.45,0,.679.348.679,1.043Z" transform="translate(-36.602 -32.399)" fill="#f227ae"/></svg>
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="51.42" height="51.42" viewBox="0 0 40.25 40.25"><path d="M20.125.349a20.2,20.2,0,0,0-3.356,40.115V24.774H11.914V19.128h4.855V14.965c0-4.83,2.938-7.463,7.23-7.463a39.9,39.9,0,0,1,4.335.222v5.049H25.357c-2.334,0-2.783,1.113-2.783,2.748v3.6h5.568l-.726,5.646H22.573V40.6A20.2,20.2,0,0,0,20.125.349Z" transform="translate(0 -0.349)" fill="#f227ae"/></svg>
+                </a>
+
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="51.42" height="51.42" viewBox="0 0 40.25 40.25"><path d="M214.89,210.945A3.945,3.945,0,1,1,210.945,207,3.945,3.945,0,0,1,214.89,210.945Zm0,0" transform="translate(-190.82 -190.82)" fill="#f227ae"/><path d="M154.414,138.211a3.919,3.919,0,0,0-2.246-2.246,6.548,6.548,0,0,0-2.2-.407c-1.248-.057-1.622-.069-4.783-.069s-3.535.012-4.783.069a6.553,6.553,0,0,0-2.2.408,3.921,3.921,0,0,0-2.246,2.246,6.551,6.551,0,0,0-.407,2.2c-.057,1.248-.069,1.622-.069,4.783s.012,3.534.069,4.783a6.548,6.548,0,0,0,.407,2.2,3.919,3.919,0,0,0,2.246,2.246,6.541,6.541,0,0,0,2.2.408c1.248.057,1.622.069,4.782.069s3.535-.012,4.783-.069a6.541,6.541,0,0,0,2.2-.408,3.919,3.919,0,0,0,2.246-2.246,6.555,6.555,0,0,0,.408-2.2c.057-1.248.069-1.622.069-4.783s-.012-3.535-.069-4.783A6.54,6.54,0,0,0,154.414,138.211Zm-9.226,13.057a6.077,6.077,0,1,1,6.077-6.077A6.077,6.077,0,0,1,145.188,151.268Zm6.318-10.975a1.42,1.42,0,1,1,1.42-1.42A1.42,1.42,0,0,1,151.505,140.294Zm0,0" transform="translate(-125.062 -125.066)" fill="#f227ae"/><path d="M20.125,0A20.125,20.125,0,1,0,40.25,20.125,20.127,20.127,0,0,0,20.125,0ZM31.611,24.889a8.479,8.479,0,0,1-.537,2.805,5.909,5.909,0,0,1-3.38,3.38,8.484,8.484,0,0,1-2.8.537c-1.232.056-1.626.07-4.764.07s-3.532-.014-4.765-.07a8.484,8.484,0,0,1-2.8-.537,5.909,5.909,0,0,1-3.38-3.38,8.476,8.476,0,0,1-.537-2.8c-.057-1.233-.07-1.626-.07-4.765s.013-3.532.07-4.764a8.479,8.479,0,0,1,.537-2.805,5.913,5.913,0,0,1,3.38-3.38,8.486,8.486,0,0,1,2.805-.537c1.232-.056,1.626-.07,4.764-.07s3.532.014,4.764.07a8.488,8.488,0,0,1,2.805.536,5.911,5.911,0,0,1,3.38,3.38,8.478,8.478,0,0,1,.537,2.805c.056,1.232.069,1.626.069,4.764S31.668,23.657,31.611,24.889Zm0,0" fill="#f227ae"/></svg>
+                </a>
+            </div>
+            <div class="contact">
+                <ul>
+                    <li>
+                        <span class="title">Contatos</span>
+                    </li>
+                    <li>
+                        <a href="tel:1199999-9999">
+                            <img src="./assets/images/icons/whatsapp.svg" width="30" height="30" alt="Whatsapp">
+                            <span>(11) 99999-9999</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="tel:08001002000">
+                            <img src="./assets/images/icons/phone.svg" width="29.17" height="29.17"  alt="Telefone">
+                            <span>0800 100 2000</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:contato@amicao.com.br">
+                            <img src="./assets/images/icons/email.svg" width="28" height="19.69" alt="E-mail">
+                            <span>contato@amicao.com.br</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <hr class="divider" />
+            <span>2020 © Desenvolvido pela equipe Clã Azul</span>
+        </div>
+    </footer>
+    
+
+    <script>
+        const btnOpen = document.querySelector('#btn-menu');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('#header');
+            header.classList.toggle('open-menu');
+          }
+        );
+        const btnClose = document.querySelector('#btn-close');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('#header');
+            header.classList.toggle('open-menu');
+          }
+        );
+      </script>
+</body>
+</html>
