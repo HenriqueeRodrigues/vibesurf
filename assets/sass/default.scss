@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
+    display: flex;
+}
+
+body {
+    margin: 0;
+    flex-direction: column;
+    > main {
+        min-height: calc(100vh - calc(62px + 377px));
+        &#home {
+            background-color: var(--purple-2);
+            flex-direction: column;
+            .test1 {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                height: 720px;
+            }
+            .test2 {
+                width: 100vw;
+                margin: 0;
+                padding: 0;
+                background-color: var(--white);
+            }
+        }
+    }
+    .contact {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        h2 {
+            font-size: 30px;
+            font-family: 'Open Sans';
+            color: var(--gray-1);
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        hr {
+            padding: 0;
+            margin: 20px;
+            width: 210px;
+            border-top: 2px solid var(--gray-1);
+            align-self: center;
+        }
+        form {
+            margin-bottom: calc( var(--space) * 3 );
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 40px;
+            .field {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 50px;
+                label {
+                    font-family: 'Open Sans';
+                    font-size: 20px;
+                    color: var(--gray-1);
+                    transition: color .2s ease-in-out;
+                }
+                input {
+                    border: none;
+                    border-bottom: 1px solid var(--gray-1);
+                    font-size: 22px;
+                    transition: border-color .2s ease-in-out;
+                    &:focus {
+                        border: none;
+                        border-bottom: 1px solid var(--pink-1);
+                        outline: none;
+                        + label {
+                            color: var(--pink-1);
+                        }
+                    }
+                }
+            }
+            button {
+                @include button-orange;
+            }
+        }
+    }
+}
+
+hr {
+    &.divider {
+        border: none;
+        border-bottom: var(--white) 1px solid;
+        width: calc(100% - 50px);
+        margin-top: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact {
+        h2 { 
+            padding: 0px 80px;
+        }
+        form {
+            padding: 40px 80px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        main {
+            min-height: calc(100vh - calc(50px + 250px));  
+        }
+        .contact {
+            padding: 0 100px;
+            form {
+                border: 1px solid var(--gray-1);
+                margin-top: 60px;
+                padding: 40px 200px;
+               
+            }
+        }
+    }
+}

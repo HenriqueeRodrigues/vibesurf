@@ -1,0 +1,19 @@
+@mixin button-orange{
+    width: 150px;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--orange);
+    border-radius: 5px;
+    color: var(--black-1);
+    font-size: 19px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    &:hover {
+        background-color: var(--white);
+        color: var(--pink-1);
+        border: 1px solid var(--orange);
+        cursor: pointer;
+    }
+}

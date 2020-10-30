@@ -1,0 +1,177 @@
+#header {
+    min-width: 320px;
+    width: 100%;
+    height: 100px;
+    background-color:#E5E3DF;
+    position: relative;
+    z-index: 5;
+    .first{
+        display: none;
+    } 
+    .logo {
+        position: absolute;
+        transition: all 1s ease-in-out;//ease sozinho é transition linear, ease-in quase igual ao linear é uma animação uniforme, ease-in-out é um efeito como que acelerando e depois ficando mais lento/
+        top: 15px;
+        width: 100px;
+        right: calc(50vw - 36px);
+        z-index: 7;
+    }
+    .menu {
+        transition: right .5s ease-in-out;
+        width: 100%;
+        height: 100vh;
+        padding-bottom: 50px;//quando voce da um scroll no chrome para celular seu viewport muda de tamanho e o CSS não reconhece isso, então esse padding é um hack par resolver essa situação/
+        background-color: #E5E3DF;
+        position: fixed;
+        right: -400px; // tem que ser -300 para ficar fora//
+        top: 0;
+        z-index: 6;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        hr {
+            position: relative;
+            width: 60%;
+            border-color: #000;
+            top: 130px; 
+        }
+        .dow {
+            top: 20px;
+        }
+        
+        nav {
+            flex-direction: column;
+            ul {
+                margin: 0;
+                padding: 0;
+                margin-top: 150px;
+                width: 100%;
+                flex-direction: column;
+                max-height: calc(100vh - 250px);
+                overflow-y: auto;
+                li {
+                    font-size: 30px;
+                    padding: 20px 0;
+                    list-style: none;
+                    justify-content: center;
+                    a {
+                        text-decoration: none;
+                        color: var(--gray-0);
+                    }
+                }
+            }
+        }
+        div {
+            align-self: center;
+            .btn-register {
+                display: flex;
+                text-decoration: none;
+                font-weight: 600px;
+                position: relative;
+            justify-content: center;
+            @include button-orange;
+            }
+        }
+        .sociais {
+            a{
+                margin: 10px;
+            }
+        }
+           
+    } 
+    #btn-open, #btn-close {
+        position: absolute;
+        right: 20px;
+        top: 25px
+    }
+}
+.open-menu {
+    overflow: hidden;//aplicando esse open menu no body, se não colocar overflow cria a barra lateral, então esse estilo significa "se sari do body, esconde!"/
+    #header {
+        .menu{
+            right: 0;
+        }
+        .logo {
+            right: 87px;
+            width: 150px;
+            right: calc(50vw - 75px);
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .open-menu {
+        overflow: initial;
+        #header {
+            .overlay {
+                display: none;
+            }
+            .logo {
+                width: 100px;
+                top: 17px;
+                right: calc(100vw - 150px);
+            }
+        }
+    }
+    #header {
+        height: 100px;
+        .italy {
+            top: 100px;
+        }
+        .logo {
+            width: 100px;
+            top: 17px;
+            right: calc(100vw - 150px);
+        }
+        #btn-open, #btn-close {
+            display: none;
+        }
+        .menu {
+            right: initial;
+            position: static;//voltaou para o padrão da tela/
+            background-color: initial;
+            width: 100%;
+            height: 100px;
+            flex-direction: row;
+            margin-left: 150px;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0;
+            .btn-register {
+                margin: 0;
+                margin-right: 30px;
+                width: 200px;
+            }
+            nav {
+                width: 100%;
+                ul {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin-top: 0;
+                    li {
+                        a {
+                            font-size: 18px;
+                            min-width: 120px;
+                            padding: 10px 0;
+                            text-align: center;
+                            &:hover {
+                                color: var(--black);
+                            }
+                        }
+                    }
+                }
+            }
+            .footer {
+                width: initial;
+                justify-content: center;
+                hr {
+                    display: none;
+                }
+                > div {
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
