@@ -1,4 +1,4 @@
-#header {
+#header{
     min-width: 320px;
     width: 100%;
     height: 100px;
@@ -98,29 +98,55 @@
         }
     }
 }
-
 @media (min-width: 1200px) {
     .open-menu {
         overflow: initial;
         #header {
-            .overlay {
-                display: none;
-            }
             .logo {
                 width: 100px;
-                top: 17px;
+                top: 30px;
                 right: calc(100vw - 150px);
             }
         }
     }
     #header {
-        height: 100px;
-        .italy {
-            top: 100px;
+        height: 105px;
+        flex-direction: column;
+        
+        .first {
+            display: flex;
+            position: relative;
+            width: 100%;
+            height: 30px;
+            background-color: black;
+            flex-direction: row;
+            p {
+                margin: 0;
+                display: flex;
+                font-size: 15px;
+                color: #CFC6C6;
+                align-items: center;
+                margin-left: 120px;  
+            }
+            div {
+                position: absolute;
+                right: 100px;
+                display: flex;
+                align-items: center;
+                a {
+                    
+                    margin-left: 20px;
+                    align-items: center;
+                    margin-top: 2px;
+                }      
+            }
+        }
+        .sociais {
+            display: none;
         }
         .logo {
             width: 100px;
-            top: 17px;
+            top: 30px;
             right: calc(100vw - 150px);
         }
         #btn-open, #btn-close {
@@ -130,20 +156,24 @@
             right: initial;
             position: static;//voltaou para o padrão da tela/
             background-color: initial;
-            width: 100%;
+            width: calc(100vw - 150px);
             height: 100px;
             flex-direction: row;
-            margin-left: 150px;
-            justify-content: space-between;
+            margin-left: 90px;
             align-items: center;
             padding-bottom: 0;
             .btn-register {
                 margin: 0;
-                margin-right: 30px;
-                width: 200px;
+                right: 130px;
+                width: 130px;
+                
             }
             nav {
+                hr {
+                    display: none;
+                }
                 width: 100%;
+                height: 50px;
                 ul {
                     flex-direction: row;
                     justify-content: flex-start;
@@ -151,27 +181,19 @@
                     margin-top: 0;
                     li {
                         a {
-                            font-size: 18px;
+                            font-size: 20px;
                             min-width: 120px;
-                            padding: 10px 0;
+                            margin-left: 100px;
+                            padding: 20px 0;
                             text-align: center;
                             &:hover {
-                                color: var(--black);
+                                color: black;
                             }
                         }
                     }
                 }
             }
-            .footer {
-                width: initial;
-                justify-content: center;
-                hr {
-                    display: none;
-                }
-                > div {
-                    height: 100px;
-                }
-            }
+           
         }
     }
 }

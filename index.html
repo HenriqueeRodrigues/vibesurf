@@ -30,12 +30,16 @@
 <body class="open-menu">
     <header id="header"> 
         <div class="first"> 
+            
             <p><img src="assets/images/icons/Caminho 29.svg" alt="Telefone" /> 0800-123445</p>
             <p><img src="assets/images/icons/placeholder.svg" alt="Localização" />Rua Leveza 18, Guaruja - SP</p>
-            <p><img src="assets/images/icons/Email.svg" alt="Email" />vibesurf@vibsurf.com</p>
-            <a href="index.html"><img src="assets/images/icons/facebook.svg" alt="Facebook" /></a>
-            <a href="index.html"><img src="assets/images/icons/twitter.svg" alt="Twitter" /></a>
-            <a href="index.html"><img src="assets/images/icons/instagram-symbol.svg" alt="Instagram" /></a>
+            <p><img src="assets/images/icons/Email.svg" alt="Email" />vibesurf@vibsurf.com</p> 
+            <div>
+                <a href="index.html"><img src="assets/images/icons/facebook.svg" alt="Facebook" /></a>
+                <a href="index.html"><img src="assets/images/icons/twitter.svg" alt="Twitter" /></a>
+                <a href="index.html"><img src="assets/images/icons/instagram-symbol.svg" alt="Instagram" /></a>
+            </div>
+           
         </div>
         
         <a href="index.html#home"><img src="assets/images/logo/Grupo 267.png" class="logo" alt="Logo- VibeSurf" /> </a>
@@ -75,21 +79,8 @@
         </div>
 
     </header>
-    <script>
-        const btnOpen = document.querySelector('#btn-menu');
-          btnOpen.addEventListener('click', e=> {
-            const header = document.querySelector('#header');
-            header.classList.toggle('open-menu');
-          }
-        );
-        const btnClose = document.querySelector('#btn-close');
-          btnClose.addEventListener('click', e=> {
-            const header = document.querySelector('#header');
-            header.classList.toggle('open-menu');
-          }
-        );
-      </script>
-
+   
+    <script src="/menu.js"></script>
 </body>
 
 
