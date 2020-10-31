@@ -7,22 +7,22 @@ const body = document.querySelector('body')
 
 btnOpen.addEventListener('click', e => {
 
-  menu.classList.add('open')
-  body.classList.add('open')
+  menu.classList.add('open-menu')
+  body.classList.add('open-menu')
 
 
 })
 
 btnClose.addEventListener('click', e => {
 
-  menu.classList.remove('open')
-  body.classList.remove('open')
+  menu.classList.remove('open-menu')
+  body.classList.remove('open-menu')
 
 })
 
 closeMenu.forEach(el => {
   el.addEventListener('click', e=> {
-      menu.classList.remove('open')
-      body.classList.remove('open');
+      menu.classList.remove('open-menu')
+      body.classList.remove('open-menu');
   })
 })

@@ -12,8 +12,14 @@
     transition: all .3s ease-in-out;
     &:hover {
         background-color: var(--white);
-        color: var(--pink-1);
-        border: 1px solid var(--orange);
+        color: black;
+        
         cursor: pointer;
+    }
+    &:hover {
+        background-color: #F6B06A;
+    }
+    &:active {
+        background-color: red;
     }
 }
