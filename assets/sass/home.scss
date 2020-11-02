@@ -111,11 +111,11 @@
         position: relative;
         .page-title {
             h3 {
-                top:10px;
+                top:0px;
             }
             hr { 
                 margin-right: 200px;
-                top: 30px; 
+                top: 18px; 
             }
         }
   
@@ -130,7 +130,7 @@
                 position: relative;
                 flex-direction: column;
                 align-items: center;
-                top: 20px;
+                top: 10px;
                 margin: 10px;
                 }
                 .last-photo {
@@ -148,11 +148,59 @@
                 text-decoration: none;
                 position: absolute;
                 @include button-orange;
-                bottom: 0px; 
+                bottom: 10px; 
             }
         }
     }
+    .about {
+        top: 190px;
+        width: 100%;
+        min-width: 320px;
+        height: 100vh;
+        background-image: url('../images/baners/sobre.webp');
+        background-size: cover;
+        background-position-x: 65%;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space);
+        position: relative;
+        flex-direction: column;
+        .page-title {
+            hr{
+                top: 60px;
+                margin-right: 100px;
+            }
+        }
+        title {
+            margin-top: 50px;
+            font-weight: bold;
+            display: flex;
+            position: absolute;
+            top: 80px;
+
+        }
+        div {
+            figure {
+                margin-top: 100px;
+            }
+        }
+        div {
+            justify-content: center;
+            .btn-register {
+                display: flex;
+                text-decoration: none;
+                position: absolute;
+                @include button-orange;
+                bottom: 30px;
+                
+            }
+        }
+
+    }
 }
+
 @media(min-width: 375px){
 
     #home {
@@ -185,6 +233,39 @@
                 }
             }
         }
+        .about {
+            height: 80vh;
+            .page-title {
+                hr{
+                    top: 60px;
+                    margin-right: 100px;
+                }
+            }
+            title {
+                font-size: 20px;
+                margin-top: 50px;
+                font-weight: bold;
+                display: flex;
+                position: absolute;
+                top: 80px;
+    
+            }
+            div {
+                figure {
+                    margin-top: 120px;
+                }
+            }
+            div {
+                justify-content: center;
+                .btn-register {
+                    bottom: 10px;
+                    
+                }
+            }
+    
+    
+        }
+        
     }  
 }
 @media(min-width: 768px) {
@@ -219,6 +300,36 @@
             div {
                 .btn-register { 
                     bottom: 50px; 
+                }
+            }
+        }
+        .about {
+            height: 80vh;
+            .page-title {
+                h4 {
+                    top: 10px;
+                }
+                hr{
+                    top: 30px;
+                    margin-right: 100px;
+                }
+            }
+            title {
+                font-size: 25px;
+                top: 45px;
+    
+            }
+            div {
+                figure {
+                    img {
+                        max-width: 35vh;
+                    }
+                }
+            }
+            div {
+                .btn-register {
+                    bottom: 15px;
+                    
                 }
             }
         }
@@ -287,9 +398,10 @@
                         display: flex;
                     }
                 }
-            }
-            
-                
+            }   
+        }
+        .about {
+            top: 290px;
         }
         
     }

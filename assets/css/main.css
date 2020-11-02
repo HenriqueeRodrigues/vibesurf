@@ -860,11 +860,11 @@ header.page-title hr {
   position: relative;
 }
 #home .gallery .page-title h3 {
-  top: 10px;
+  top: 0px;
 }
 #home .gallery .page-title hr {
   margin-right: 200px;
-  top: 30px;
+  top: 18px;
 }
 #home .gallery .wap {
   flex-direction: column;
@@ -879,7 +879,7 @@ header.page-title hr {
   position: relative;
   flex-direction: column;
   align-items: center;
-  top: 20px;
+  top: 10px;
   margin: 10px;
 }
 #home .gallery .wap .master .last-photo {
@@ -904,7 +904,7 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  bottom: 0px;
+  bottom: 10px;
 }
 #home .gallery div .btn-register:hover {
   background-color: var(--white);
@@ -915,6 +915,67 @@ header.page-title hr {
   background-color: #F6B06A;
 }
 #home .gallery div .btn-register:active {
+  background-color: red;
+}
+#home .about {
+  top: 190px;
+  width: 100%;
+  min-width: 320px;
+  height: 100vh;
+  background-image: url("../images/baners/sobre.webp");
+  background-size: cover;
+  background-position-x: 65%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space);
+  position: relative;
+  flex-direction: column;
+}
+#home .about .page-title hr {
+  top: 60px;
+  margin-right: 100px;
+}
+#home .about title {
+  margin-top: 50px;
+  font-weight: bold;
+  display: flex;
+  position: absolute;
+  top: 80px;
+}
+#home .about div figure {
+  margin-top: 100px;
+}
+#home .about div {
+  justify-content: center;
+}
+#home .about div .btn-register {
+  display: flex;
+  text-decoration: none;
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: var(--black-1);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  bottom: 30px;
+}
+#home .about div .btn-register:hover {
+  background-color: var(--white);
+  color: black;
+  cursor: pointer;
+}
+#home .about div .btn-register:hover {
+  background-color: #F6B06A;
+}
+#home .about div .btn-register:active {
   background-color: red;
 }
 
@@ -935,6 +996,30 @@ header.page-title hr {
   }
   #home .gallery div .btn-register {
     bottom: 50px;
+  }
+  #home .about {
+    height: 80vh;
+  }
+  #home .about .page-title hr {
+    top: 60px;
+    margin-right: 100px;
+  }
+  #home .about title {
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+    display: flex;
+    position: absolute;
+    top: 80px;
+  }
+  #home .about div figure {
+    margin-top: 120px;
+  }
+  #home .about div {
+    justify-content: center;
+  }
+  #home .about div .btn-register {
+    bottom: 10px;
   }
 }
 @media (min-width: 768px) {
@@ -964,6 +1049,26 @@ header.page-title hr {
   }
   #home .gallery div .btn-register {
     bottom: 50px;
+  }
+  #home .about {
+    height: 80vh;
+  }
+  #home .about .page-title h4 {
+    top: 10px;
+  }
+  #home .about .page-title hr {
+    top: 30px;
+    margin-right: 100px;
+  }
+  #home .about title {
+    font-size: 25px;
+    top: 45px;
+  }
+  #home .about div figure img {
+    max-width: 35vh;
+  }
+  #home .about div .btn-register {
+    bottom: 15px;
   }
 }
 @media (min-width: 992px) {
@@ -1014,6 +1119,9 @@ header.page-title hr {
   }
   #home .gallery .wap .master .last-photo {
     display: flex;
+  }
+  #home .about {
+    top: 290px;
   }
 }
 
