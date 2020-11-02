@@ -4,6 +4,8 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
+    max-width: 1500;
+    
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
@@ -11,7 +13,8 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 }
 
 body {
-    margin: 0;
+    max-width: 1600px;
+    margin: 0 auto;
     flex-direction: column;
     > main {
         min-height: calc(100vh - calc(62px + 377px));
