@@ -102,7 +102,7 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
     .open-menu {
         overflow: initial;
         #header {
@@ -111,7 +111,6 @@
                 top: 25px;
             }
             .logo {
-                width: 100px;
                 top: 30px;
                 right: calc(100vw - 150px);
             }
@@ -155,6 +154,7 @@
             width: 100px;
             top: 30px;
             right: calc(100vw - 150px);
+            margin-right: 10px;
         }
         #btn-open, #btn-close {
             display: none;
@@ -166,7 +166,6 @@
             width: calc(100vw - 150px);
             height: 100px;
             flex-direction: row;
-            margin-left: 90px;
             align-items: center;
             padding-bottom: 0;
             
@@ -177,15 +176,17 @@
                 width: 100%;
                 
                 ul {
-                    width: calc(100vw - 150px);
+                    width: calc(100vw -150px);
                     position: absolute;
                     flex-direction: row;
                     margin-top: -50px;
+                    justify-content: center;
                     li {
+                       
                         a {
-                            font-size: 14px;
+                            font-size: 15px;
                             min-width: 120px;
-                            margin-left: 60px;
+                            margin: 0 15px;
                             padding: 20px 0;
                             text-align: center;
                             &:hover {
@@ -196,14 +197,34 @@
                 }
             }
             div {
+                justify-content: flex-end;
+                margin-right: -130px;
                 .btn-register {
                     width: 100px;
                     height: 25px;
                     font-size: 15px;
                     margin:0;
+                    
                 }
             }
            
         }
     }
 }
+@media (min-width: 1200px) {
+    #header {
+        .menu {   
+            nav {
+                ul {   
+                    li {
+                        a {
+                            margin: 0 30px;
+                        }
+                    }
+                }
+            }   
+        }
+    }
+
+}
+

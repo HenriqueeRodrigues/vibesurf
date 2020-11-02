@@ -104,6 +104,32 @@ body > main#home .test2 {
   padding: 0;
   background-color: var(--white);
 }
+body .page-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+body .page-title h2, body .page-title h3, body .page-title h4, body .page-title h5 {
+  display: flex;
+  position: absolute;
+  color: var(--orange);
+  font-size: 23px;
+  text-align: left;
+  top: 35px;
+  font-weight: bold;
+}
+body .page-title hr {
+  display: flex;
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  border: none;
+  border-left: var(--orange) 2px Solid;
+  border-bottom: var(--orange) 2px Solid;
+  color: var(--white);
+  top: 50px;
+  margin-right: 275px;
+}
 body .contact {
   flex-direction: column;
   width: 100%;
@@ -329,7 +355,7 @@ hr.divider {
   right: calc(50vw - 75px);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .open-menu {
     overflow: initial;
   }
@@ -338,7 +364,6 @@ hr.divider {
     top: 25px;
   }
   .open-menu #header .logo {
-    width: 100px;
     top: 30px;
     right: calc(100vw - 150px);
   }
@@ -381,6 +406,7 @@ hr.divider {
     width: 100px;
     top: 30px;
     right: calc(100vw - 150px);
+    margin-right: 10px;
   }
   #header #btn-open, #header #btn-close {
     display: none;
@@ -392,7 +418,6 @@ hr.divider {
     width: calc(100vw - 150px);
     height: 100px;
     flex-direction: row;
-    margin-left: 90px;
     align-items: center;
     padding-bottom: 0;
   }
@@ -403,26 +428,36 @@ hr.divider {
     display: none;
   }
   #header .menu nav ul {
-    width: calc(100vw - 150px);
+    width: calc(100vw -150px);
     position: absolute;
     flex-direction: row;
     margin-top: -50px;
+    justify-content: center;
   }
   #header .menu nav ul li a {
-    font-size: 14px;
+    font-size: 15px;
     min-width: 120px;
-    margin-left: 60px;
+    margin: 0 15px;
     padding: 20px 0;
     text-align: center;
   }
   #header .menu nav ul li a:hover {
     color: black;
   }
+  #header .menu div {
+    justify-content: flex-end;
+    margin-right: -130px;
+  }
   #header .menu div .btn-register {
     width: 100px;
     height: 25px;
     font-size: 15px;
     margin: 0;
+  }
+}
+@media (min-width: 1200px) {
+  #header .menu nav ul li a {
+    margin: 0 30px;
   }
 }
 header.page-title {
@@ -704,92 +739,87 @@ header.page-title hr {
 #home > header {
   width: 100%;
   min-width: 320px;
-  min-height: 675px;
   height: 100vh;
   background-image: url("../images/baners/home.webp");
   background-size: cover;
   background-position-x: 55%;
   background-position-y: center;
   background-repeat: no-repeat;
-  flex-direction: row-reverse;
   align-items: flex-end;
   justify-content: flex-end;
   padding: var(--space);
+  position: relative;
 }
 #home > header h1 {
+  display: flex;
+  width: 300px;
   position: absolute;
   font-weight: bold;
   color: var(--orange);
-  font-size: 35px;
+  font-size: 30px;
   text-align: left;
-  bottom: 55px;
-  margin-left: 20px;
+  bottom: 99px;
+  margin: -21px;
+  align-items: center;
+  justify-content: center;
 }
 #home > header hr {
   position: absolute;
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 80px;
   flex-direction: column;
   border: none;
   border-left: var(--orange) 3px Solid;
   border-bottom: var(--orange) 3px Solid;
   color: var(--white);
-  bottom: 65px;
+  bottom: 70px;
   margin-left: 10px;
+  margin-right: 204px;
 }
-#home .gallery {
+#home .shop {
   min-width: 320px;
-  min-height: 675px;
-  height: 100vh;
-  background-image: url("../images/baners/produtos.webp");
-  background-size: cover;
-  background-position-x: 19%;
-  background-position-y: center;
-  background-repeat: no-repeat;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: var(--space);
+  position: relative;
+  justify-content: center;
 }
-#home .gallery h2 {
-  position: absolute;
-  font-weight: 400px;
-  color: var(--orange);
-  font-size: 25px;
-  text-align: left;
-  top: 850px;
-  margin-left: 20px;
-}
-#home .gallery hr {
-  left: 30px;
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  flex-direction: row;
-  border: none;
-  border-left: var(--orange) 3px Solid;
-  border-bottom: var(--orange) 3px Solid;
-  color: var(--white);
-  top: 850px;
-  margin-left: 10px;
-}
-#home .gallery figure {
+#home .shop .wap {
   flex-direction: column;
+}
+#home .shop .wap figure {
   justify-content: center;
   position: relative;
-  border: grey 1px solid;
-  margin-bottom: 20px;
-  top: 65px;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
 }
-#home .gallery figure span {
+#home .shop .wap .last {
   display: none;
 }
-#home .gallery .btn-register {
+#home .shop .wap {
+  flex-direction: column;
+}
+#home .shop .wap figure {
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+}
+#home .shop .wap .last {
+  display: none;
+}
+#home .shop .wap + .wap {
+  display: none;
+}
+#home .shop div {
+  justify-content: center;
+}
+#home .shop div .btn-register {
   display: flex;
   text-decoration: none;
-  font-weight: 600px;
-  position: relative;
-  justify-content: center;
+  position: absolute;
   width: 150px;
   height: 35px;
   justify-content: center;
@@ -801,18 +831,190 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  margin-top: 80px;
+  bottom: -150px;
 }
-#home .gallery .btn-register:hover {
+#home .shop div .btn-register:hover {
   background-color: var(--white);
   color: black;
   cursor: pointer;
 }
-#home .gallery .btn-register:hover {
+#home .shop div .btn-register:hover {
   background-color: #F6B06A;
 }
-#home .gallery .btn-register:active {
+#home .shop div .btn-register:active {
   background-color: red;
+}
+#home .gallery {
+  top: 190px;
+  width: 100%;
+  min-width: 320px;
+  height: calc(100vh + 200px);
+  background-image: url("../images/baners/gallery.webp");
+  background-size: cover;
+  background-position-x: 29%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space);
+  position: relative;
+}
+#home .gallery .page-title h3 {
+  top: 10px;
+}
+#home .gallery .page-title hr {
+  margin-right: 200px;
+  top: 30px;
+}
+#home .gallery .wap {
+  flex-direction: column;
+  height: 100vh;
+}
+#home .gallery .wap .master {
+  flex-direction: column;
+  width: 250px;
+}
+#home .gallery .wap .master figure {
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 20px;
+  margin: 10px;
+}
+#home .gallery .wap .master .last-photo {
+  display: none;
+}
+#home .gallery div {
+  justify-content: center;
+  align-items: center;
+}
+#home .gallery div .btn-register {
+  display: flex;
+  text-decoration: none;
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: var(--black-1);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  bottom: 0px;
+}
+#home .gallery div .btn-register:hover {
+  background-color: var(--white);
+  color: black;
+  cursor: pointer;
+}
+#home .gallery div .btn-register:hover {
+  background-color: #F6B06A;
+}
+#home .gallery div .btn-register:active {
+  background-color: red;
+}
+
+@media (min-width: 375px) {
+  #home > header h1 {
+    font-size: 35px;
+    bottom: 60px;
+    margin: 20px;
+  }
+  #home > header hr {
+    margin-right: 250px;
+  }
+  #home .shop figure {
+    top: 90px;
+  }
+  #home .gallery .wap .master figure {
+    top: -10px;
+  }
+  #home .gallery div .btn-register {
+    bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  #home .shop .wap {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #home .shop .wap figure {
+    margin: 10px;
+  }
+  #home .shop div .btn-register {
+    bottom: -150px;
+  }
+  #home .gallery {
+    height: 70vh;
+  }
+  #home .gallery .wap {
+    flex-direction: row;
+  }
+  #home .gallery .wap .master {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #home .gallery .wap .master figure {
+    top: 0;
+    margin: 30px;
+  }
+  #home .gallery div .btn-register {
+    bottom: 50px;
+  }
+}
+@media (min-width: 992px) {
+  #home > header h1 {
+    width: 400px;
+    font-size: 40px;
+    margin: 20px;
+    bottom: 30px;
+  }
+  #home > header hr {
+    margin-right: 355px;
+    bottom: 40px;
+  }
+  #home .shop {
+    height: 70vh;
+  }
+  #home .shop .page-title h2 {
+    font-size: 35px;
+    top: 35px;
+  }
+  #home .shop .page-title hr {
+    top: 65px;
+    margin-right: 430px;
+  }
+  #home .shop .wap figure {
+    top: 150px;
+  }
+  #home .shop .wap .last {
+    display: flex;
+  }
+  #home .shop .wap + .wap {
+    display: flex;
+  }
+  #home .shop div .btn-register {
+    bottom: -240px;
+  }
+  #home .gallery {
+    top: 290px;
+    height: 100vh;
+  }
+  #home .gallery .page-title h3 {
+    font-size: 35px;
+    top: 35px;
+  }
+  #home .gallery .page-title hr {
+    top: 70px;
+    margin-right: 320px;
+  }
+  #home .gallery .wap .master .last-photo {
+    display: flex;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
