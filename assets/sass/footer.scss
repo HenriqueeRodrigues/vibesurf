@@ -1,0 +1,124 @@
+#footer {
+    top: 195px;
+    width: 100%;
+    min-width: 320px;
+    background-color: #E5E3DF;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    color: var(--footer) ;
+    .columns {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        color: var(--footer);
+        .links {
+            display: none;
+
+        }
+        ul{
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            color: var(--footer);
+            
+            li {
+                list-style: none;
+                font-size: 16px;
+                padding: .5em 0;
+                
+                a {
+                    color: var(--footer);
+                    text-decoration: none;
+                    img {
+                        margin-right:0px;
+                        color: var(--footer); 
+                    }
+                   
+                }
+                &.title {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                &.social {
+                    width: 100vw;
+                    color: var(--footer) ;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    
+                    a {
+                        margin: 0.5em;     
+                    }
+                    img {
+                        
+                        
+                    }
+                }
+            }
+            
+        }
+        .logo {
+            margin: var(--space) 0;
+        }
+    }
+    p {
+        font-weight: bold;
+        font-size: 15px;    
+   }
+}
+
+@media (min-width: 992px) {
+    #footer {
+        top: 295px;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-bottom: 0;
+        
+        .columns {
+            flex-direction: row;
+            justify-content: center;
+            width: 100vw;
+            
+            .links {
+                display:flex;
+                width: 100px;;
+                
+            }
+            ul{
+                width: 70vw;
+               
+               
+                li {
+                   
+                    a {
+                        
+                        &:hover {
+                            color: var(--white)
+                        }
+                    }
+                }
+            }
+            .logo {
+                margin: var(--space) 0;
+            }
+        
+        }
+    }   
+}
+@media (min-width: 1200px) {
+    #footer {    
+        .columns {
+            .links {
+            }
+            ul{
+                width: 80vw; 
+                
+            }
+            .logo {
+                width: 300px;
+            }
+        
+        }
+    }   
+}
