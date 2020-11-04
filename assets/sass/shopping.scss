@@ -1,0 +1,128 @@
+#shopping {
+    width: 100%;
+    position: relative;
+    .shop {
+        width: 100%;
+        min-width: 320px;
+        flex-direction: column;
+        padding: var(--space);
+        position: relative;
+        justify-content: center;
+        .page-title {
+            hr{
+                margin-right: 91px;
+            }
+        }
+        .wap { 
+            flex-direction: column;
+            figure {
+                justify-content: center;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                top: 100px;
+                margin-top: 80px;
+                a{
+                    bottom:-40px;
+                }
+            }
+            .last {
+                display: none;
+            }
+            
+            
+        }
+        
+        .btn-register {
+            display: flex;
+            text-decoration: none;
+            position: absolute;
+            @include button-orange;
+            bottom: -32px; 
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: normal;
+            justify-content: center;
+        }
+        .more {
+            justify-content: flex-end;
+            a{
+                width: 70px;        
+                height: 25px;
+                font-size: 15px;
+                font-weight: normal;
+                position: absolute;
+                bottom: -186px;
+
+            }
+        }
+        
+        
+    }
+    
+}
+
+@media(min-width: 992px) {
+    #shopping {
+        .shop { 
+            align-items: center ;
+            .wap {
+                flex-direction: row;
+                align-items: center;
+                figure {
+                    margin: 10px;
+                }
+            
+            }
+            .page-title {
+                h2 {
+                    font-size: 35px;
+                    top: 35px;
+                }
+                hr {
+                    top: 65px;  
+                    margin-right: 150px;
+                }
+            }
+            .wap {
+                align-items: flex-end;
+                figure{
+                    top: 200px;
+                    margin:30px;
+                }
+            }
+            .more {
+                justify-content: flex-end;
+                align-self: flex-end;
+                a{
+                    width: 70px;        
+                    height: 25px;
+                    font-size: 15px;
+                    font-weight: normal;
+                    position: absolute;
+                    bottom: -280px;
+                }
+            }
+        }
+        
+        
+    }
+
+}
+@media(min-width: 992px) {
+    #shopping {
+        .shop {   
+            .wap {
+                align-items: flex-end;
+                figure{
+                    top: 200px;
+                    margin:50px;
+                }
+            }
+        }
+    }
+
+
+}
+

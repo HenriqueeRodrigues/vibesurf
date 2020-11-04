@@ -1,5 +1,4 @@
 #footer {
-    top: 195px;
     width: 100%;
     min-width: 320px;
     background-color: #E5E3DF;
@@ -70,15 +69,15 @@
 
 @media (min-width: 992px) {
     #footer {
-        top: 295px;
         padding-left: 100px;
         padding-right: 100px;
         padding-bottom: 0;
+        top: 0;
         
         .columns {
             flex-direction: row;
             justify-content: center;
-            width: 100vw;
+            width: 100%;
             
             .links {
                 display:flex;
@@ -86,7 +85,7 @@
                 
             }
             ul{
-                width: 70vw;
+                width: 70%;
                
                
                 li {
@@ -112,7 +111,7 @@
             .links {
             }
             ul{
-                width: 80vw; 
+                width: 80%; 
                 
             }
             .logo {

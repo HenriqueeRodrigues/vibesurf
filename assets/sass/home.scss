@@ -156,7 +156,7 @@
         top: 195px;
         width: 100%;
         min-width: 320px;
-        height: 100vh;
+        height: calc(100% + 100px);
         background-image: url('../images/baners/sobre.webp');
         background-size: cover;
         background-position-x: 65%;
@@ -184,6 +184,9 @@
         div {
             figure {
                 margin-top: 100px;
+                img {
+                    width: 70vw;
+                }
             }
         }
         div {
@@ -193,7 +196,7 @@
                 text-decoration: none;
                 position: absolute;
                 @include button-orange;
-                bottom: 30px;
+                bottom: 15px;
                 
             }
         }
@@ -351,7 +354,7 @@
             }
         }
         .shop { 
-            height: 70vh;
+            
             .page-title {
                 h2 {
                     font-size: 35px;
@@ -402,6 +405,19 @@
         }
         .about {
             top: 295px;
+            height: 100vh;
+            div {
+                figure {
+                    margin-top: 0px;
+                }
+            }
+            div {
+                .btn-register {
+                    bottom: 122px;
+                    z-index: 10;
+                    
+                }
+            }
         }
         
     }

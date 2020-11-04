@@ -76,7 +76,6 @@
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
-  max-width: 1500;
 }
 
 body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr, form {
@@ -84,7 +83,6 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 }
 
 body {
-  max-width: 1600px;
   margin: 0 auto;
   flex-direction: column;
 }
@@ -93,18 +91,6 @@ body > main {
 }
 body > main#home {
   flex-direction: column;
-}
-body > main#home .test1 {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  height: 720px;
-}
-body > main#home .test2 {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
-  background-color: var(--white);
 }
 body .page-title {
   display: flex;
@@ -137,21 +123,6 @@ body .contact {
   width: 100%;
   justify-content: center;
 }
-body .contact h2 {
-  font-size: 30px;
-  font-family: "Open Sans";
-  color: var(--gray-1);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-body .contact hr {
-  padding: 0;
-  margin: 20px;
-  width: 210px;
-  border-top: 2px solid var(--gray-1);
-  align-self: center;
-}
 body .contact form {
   margin-bottom: calc( var(--space) * 3 );
   flex-direction: column;
@@ -168,22 +139,22 @@ body .contact form .field {
 body .contact form .field label {
   font-family: "Open Sans";
   font-size: 20px;
-  color: var(--gray-1);
+  color: #7E7E7E;
   transition: color 0.2s ease-in-out;
 }
 body .contact form .field input {
   border: none;
-  border-bottom: 1px solid var(--gray-1);
+  border-bottom: 1px solid #7E7E7E;
   font-size: 22px;
   transition: border-color 0.2s ease-in-out;
 }
 body .contact form .field input:focus {
   border: none;
-  border-bottom: 1px solid var(--pink-1);
+  border-bottom: 1px solid var(--orange);
   outline: none;
 }
 body .contact form .field input:focus + label {
-  color: var(--pink-1);
+  color: var(--orange);
 }
 body .contact form button {
   width: 150px;
@@ -240,7 +211,7 @@ hr.divider {
 }
 #header {
   min-width: 320px;
-  width: 100%;
+  width: 100vw;
   height: 100px;
   background-color: #E5E3DF;
   position: relative;
@@ -924,7 +895,7 @@ header.page-title hr {
   top: 195px;
   width: 100%;
   min-width: 320px;
-  height: 100vh;
+  height: calc(100% + 100px);
   background-image: url("../images/baners/sobre.webp");
   background-size: cover;
   background-position-x: 65%;
@@ -950,6 +921,9 @@ header.page-title hr {
 #home .about div figure {
   margin-top: 100px;
 }
+#home .about div figure img {
+  width: 70vw;
+}
 #home .about div {
   justify-content: center;
 }
@@ -968,7 +942,7 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  bottom: 30px;
+  bottom: 15px;
 }
 #home .about div .btn-register:hover {
   background-color: var(--white);
@@ -1085,9 +1059,6 @@ header.page-title hr {
     margin-right: 355px;
     bottom: 40px;
   }
-  #home .shop {
-    height: 70vh;
-  }
   #home .shop .page-title h2 {
     font-size: 35px;
     top: 35px;
@@ -1125,10 +1096,17 @@ header.page-title hr {
   }
   #home .about {
     top: 295px;
+    height: 100vh;
+  }
+  #home .about div figure {
+    margin-top: 0px;
+  }
+  #home .about div .btn-register {
+    bottom: 122px;
+    z-index: 10;
   }
 }
 #footer {
-  top: 195px;
   width: 100%;
   min-width: 320px;
   background-color: #E5E3DF;
@@ -1188,22 +1166,22 @@ header.page-title hr {
 
 @media (min-width: 992px) {
   #footer {
-    top: 295px;
     padding-left: 100px;
     padding-right: 100px;
     padding-bottom: 0;
+    top: 0;
   }
   #footer .columns {
     flex-direction: row;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
   }
   #footer .columns .links {
     display: flex;
     width: 100px;
   }
   #footer .columns ul {
-    width: 70vw;
+    width: 70%;
   }
   #footer .columns ul li a:hover {
     color: var(--white);
@@ -1214,10 +1192,398 @@ header.page-title hr {
 }
 @media (min-width: 1200px) {
   #footer .columns ul {
-    width: 80vw;
+    width: 80%;
   }
   #footer .columns .logo {
     width: 300px;
+  }
+}
+#conect {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#conect .contact {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+#conect .contact .page-title {
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  top: -10px;
+}
+#conect .contact .page-title h1 {
+  display: flex;
+  position: absolute;
+  color: var(--orange);
+  font-size: 35px;
+  text-align: left;
+  font-weight: bold;
+  top: 18px;
+}
+#conect .contact hr {
+  top: 50px;
+  margin-right: 122px;
+}
+#conect .contact form {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 200px;
+  margin: 1px;
+}
+#conect .contact form button {
+  bottom: 0;
+  margin-bottom: -3px;
+}
+
+@media (min-width: 375px) {
+  #conect {
+    top: 300px;
+  }
+  #conect .contact form button {
+    margin-top: 70px;
+  }
+}
+@media (min-width: 768px) {
+  .contact h2 {
+    padding: 0px 80px;
+  }
+  .contact form {
+    padding: 40px 80px;
+  }
+}
+@media (min-width: 1200px) {
+  body main {
+    min-height: calc(100vh - calc(50px + 250px));
+  }
+  body .contact {
+    padding: 0 100px;
+  }
+  body .contact form {
+    border: 1px solid var(--gray-1);
+    margin-top: 60px;
+    padding: 40px 200px;
+  }
+}
+#shopping {
+  width: 100%;
+  position: relative;
+}
+#shopping .shop {
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+  padding: var(--space);
+  position: relative;
+  justify-content: center;
+}
+#shopping .shop .page-title hr {
+  margin-right: 91px;
+}
+#shopping .shop .wap {
+  flex-direction: column;
+}
+#shopping .shop .wap figure {
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 100px;
+  margin-top: 80px;
+}
+#shopping .shop .wap figure a {
+  bottom: -40px;
+}
+#shopping .shop .wap .last {
+  display: none;
+}
+#shopping .shop .btn-register {
+  display: flex;
+  text-decoration: none;
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: var(--black-1);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  bottom: -32px;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  justify-content: center;
+}
+#shopping .shop .btn-register:hover {
+  background-color: var(--white);
+  color: black;
+  cursor: pointer;
+}
+#shopping .shop .btn-register:hover {
+  background-color: #F6B06A;
+}
+#shopping .shop .btn-register:active {
+  background-color: red;
+}
+#shopping .shop .more {
+  justify-content: flex-end;
+}
+#shopping .shop .more a {
+  width: 70px;
+  height: 25px;
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  bottom: -186px;
+}
+
+@media (min-width: 992px) {
+  #shopping .shop {
+    align-items: center;
+  }
+  #shopping .shop .wap {
+    flex-direction: row;
+    align-items: center;
+  }
+  #shopping .shop .wap figure {
+    margin: 10px;
+  }
+  #shopping .shop .page-title h2 {
+    font-size: 35px;
+    top: 35px;
+  }
+  #shopping .shop .page-title hr {
+    top: 65px;
+    margin-right: 150px;
+  }
+  #shopping .shop .wap {
+    align-items: flex-end;
+  }
+  #shopping .shop .wap figure {
+    top: 200px;
+    margin: 30px;
+  }
+  #shopping .shop .more {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  #shopping .shop .more a {
+    width: 70px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
+    bottom: -280px;
+  }
+}
+@media (min-width: 992px) {
+  #shopping .shop .wap {
+    align-items: flex-end;
+  }
+  #shopping .shop .wap figure {
+    top: 200px;
+    margin: 50px;
+  }
+}
+#auth {
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#auth > section {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#auth > section form {
+  margin-top: 170px;
+  width: 100%;
+  max-width: unset;
+}
+#auth > section form.hide {
+  display: none;
+}
+#auth > section form .message {
+  align-items: center;
+  justify-content: center;
+}
+#auth > section form .message img {
+  margin-right: 5px;
+}
+#auth > section form .message span {
+  font-size: 14px;
+  font-weight: 600;
+  color: rosybrown;
+}
+#auth > section form h1 {
+  text-align: center;
+  color: green;
+  font-size: 28px;
+  font-weight: 600;
+  margin: var(--space) auto;
+}
+#auth > section form hr {
+  width: 68px;
+  border: none;
+  border-top: 4px solid red;
+  margin-bottom: var(--space);
+}
+#auth > section p {
+  color: var(--gray-9);
+  font-size: 16px;
+}
+
+@media (min-width: 500px) {
+  #auth > section {
+    width: 500px;
+    height: initial;
+  }
+  #auth > section a img {
+    top: 125px;
+  }
+  #auth > section form {
+    border: var(--gray-8) 1px solid;
+    border-radius: calc(2* 5px);
+    width: 100%;
+    padding: 50px;
+    padding-top: 100px;
+  }
+}
+#gallery {
+  width: 100%;
+  height: 2800px;
+  min-width: 320px;
+  background-image: url("../images/baners/gallery.webp");
+  background-size: cover;
+  background-position-x: 29%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space);
+  position: relative;
+}
+#gallery .photo {
+  top: -70px;
+  width: 100%;
+  min-width: 320px;
+  flex-direction: column;
+  padding: var(--space);
+  position: relative;
+  justify-content: center;
+}
+#gallery .photo .page-title h2 {
+  font-size: 30px;
+  top: -10px;
+}
+#gallery .photo .page-title hr {
+  margin-right: 90px;
+  top: 15px;
+}
+#gallery .photo .wap {
+  flex-direction: column;
+}
+#gallery .photo .wap figure {
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  top: 50px;
+}
+#gallery .photo .btn-register {
+  display: flex;
+  text-decoration: none;
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: var(--black-1);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  bottom: -32px;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: normal;
+  justify-content: center;
+}
+#gallery .photo .btn-register:hover {
+  background-color: var(--white);
+  color: black;
+  cursor: pointer;
+}
+#gallery .photo .btn-register:hover {
+  background-color: #F6B06A;
+}
+#gallery .photo .btn-register:active {
+  background-color: red;
+}
+#gallery .photo .more {
+  justify-content: flex-end;
+}
+#gallery .photo .more a {
+  width: 70px;
+  height: 25px;
+  font-size: 15px;
+  font-weight: normal;
+  position: absolute;
+  bottom: -60px;
+}
+
+@media (min-width: 992px) {
+  #gallery {
+    height: 900px;
+  }
+  #gallery .photo {
+    align-items: center;
+    top: 30px;
+  }
+  #gallery .photo .wap {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  #gallery .photo .wap figure {
+    margin: 0px;
+    top: 0px;
+    margin: 5px;
+  }
+  #gallery .photo .page-title h2 {
+    font-size: 35px;
+    top: -100px;
+  }
+  #gallery .photo .page-title hr {
+    top: -60px;
+    margin-right: 115px;
+  }
+  #gallery .photo .more {
+    justify-content: flex-end;
+    align-self: flex-end;
+  }
+  #gallery .photo .more a {
+    width: 70px;
+    height: 25px;
+    font-size: 15px;
+    font-weight: normal;
+    position: absolute;
   }
 }
 

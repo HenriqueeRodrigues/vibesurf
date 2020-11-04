@@ -1,0 +1,129 @@
+#gallery {
+    width: 100%;
+    height: 2800px;
+    min-width: 320px;
+    background-image: url('../images/baners/gallery.webp');
+    background-size: cover;
+    background-position-x: 29%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space);
+    position: relative;
+    .photo {
+        top: -70px;
+        width: 100%;
+        min-width: 320px;
+        flex-direction: column;
+        padding: var(--space);
+        position: relative;
+        justify-content: center;
+        .page-title {
+            h2{
+                font-size: 30px;
+                top: -10px
+            }
+            hr{
+                margin-right: 90px;
+                top: 15px;
+            }
+        }
+        .wap { 
+            flex-direction: column;
+            
+            figure {
+                justify-content: center;
+                position: relative;
+                flex-direction: column;
+                align-items: center;
+                top: 50px;
+                
+            }
+            .last-photo {
+                //display: none;
+            }
+            
+            
+        }
+        
+        .btn-register {
+            display: flex;
+            text-decoration: none;
+            position: absolute;
+            @include button-orange;
+            bottom: -32px; 
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            font-weight: normal;
+            justify-content: center;
+        }
+        .more {
+            justify-content: flex-end;
+            a{
+                width: 70px;        
+                height: 25px;
+                font-size: 15px;
+                font-weight: normal;
+                position: absolute;
+                bottom: -60px;
+
+            }
+        }
+        
+        
+    }
+   
+}
+
+
+@media(min-width: 992px) {
+    #gallery {
+        height: 900px;
+        .photo { 
+            align-items: center ;
+            top: 30px;
+            .wap {
+                flex-direction: row;
+                align-items: flex-end;
+                figure {
+                    margin: 0px;
+                    top: 0px;
+                    margin: 5px;
+                }
+            
+            }
+            .page-title {
+                h2 {
+                    font-size: 35px;
+                    top: -100px;
+                }
+                hr {
+                    top: -60px;  
+                    margin-right: 115px;
+                }
+            }
+            
+            .more {
+                justify-content: flex-end;
+                align-self: flex-end;
+                a{
+                    width: 70px;        
+                    height: 25px;
+                    font-size: 15px;
+                    font-weight: normal;
+                    position: absolute;
+                }
+            }
+        }
+        
+        
+    }
+
+}
+
+
+
+

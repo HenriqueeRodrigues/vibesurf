@@ -4,7 +4,6 @@
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 400;
-    max-width: 1500;
     
 }
 
@@ -13,7 +12,7 @@ body, div, article, aside, footer, header, main, nav, section, ul, ol, li, butto
 }
 
 body {
-    max-width: 1600px;
+    //max-width: 1400px;
     margin: 0 auto;
     flex-direction: column;
     > main {
@@ -21,22 +20,9 @@ body {
         &#home {
             
             flex-direction: column;
-            .test1 {
-                width: 100vw;
-                margin: 0;
-                padding: 0;
-                height: 720px;
-            }
-            .test2 {
-                width: 100vw;
-                margin: 0;
-                padding: 0;
-                background-color: var(--white);
-            }
+            
         }
     }
-    
-
     .page-title {
         display: flex;
         justify-content: center;
@@ -68,21 +54,6 @@ body {
         flex-direction: column;
         width: 100%;
         justify-content: center;
-        h2 {
-            font-size: 30px;
-            font-family: 'Open Sans';
-            color: var(--gray-1);
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-        hr {
-            padding: 0;
-            margin: 20px;
-            width: 210px;
-            border-top: 2px solid var(--gray-1);
-            align-self: center;
-        }
         form {
             margin-bottom: calc( var(--space) * 3 );
             flex-direction: column;
@@ -93,24 +64,25 @@ body {
             .field {
                 flex-direction: column;
                 width: 100%;
+                
                 margin-bottom: 50px;
                 label {
                     font-family: 'Open Sans';
                     font-size: 20px;
-                    color: var(--gray-1);
+                    color: #7E7E7E;
                     transition: color .2s ease-in-out;
                 }
                 input {
                     border: none;
-                    border-bottom: 1px solid var(--gray-1);
+                    border-bottom: 1px solid #7E7E7E;
                     font-size: 22px;
                     transition: border-color .2s ease-in-out;
                     &:focus {
                         border: none;
-                        border-bottom: 1px solid var(--pink-1);
+                        border-bottom: 1px solid var(--orange);
                         outline: none;
                         + label {
-                            color: var(--pink-1);
+                            color: var(--orange);
                         }
                     }
                 }
@@ -138,6 +110,7 @@ hr {
         }
         form {
             padding: 40px 80px;
+            
         }
     }
 }
