@@ -59,6 +59,15 @@
                 flex-direction: column;
                 align-items: center;
                 top: 100px;
+                a{
+                    bottom:-40px;
+
+                    &:hover {
+                        border: none;
+                        border: 1px solid var(--orange);
+                        outline: none;
+                    }
+                }
             }
             .last {
                 display: none;
@@ -132,6 +141,15 @@
                 align-items: center;
                 top: 10px;
                 margin: 10px;
+                a{
+                    bottom:-40px;
+
+                    &:hover {
+                        border: none;
+                        border-bottom: 1px solid var(--orange);
+                        outline: none;
+                    }
+                }
                 }
                 .last-photo {
                     display: none;
@@ -153,10 +171,9 @@
         }
     }
     .about {
-        top: 195px;
         width: 100%;
         min-width: 320px;
-        height: calc(100% + 100px);
+        height: 850px;
         background-image: url('../images/baners/sobre.webp');
         background-size: cover;
         background-position-x: 65%;
@@ -168,8 +185,11 @@
         position: relative;
         flex-direction: column;
         .page-title {
+            h4 {
+                top: 190px;
+            }
             hr{
-                top: 60px;
+                top: 215px;
                 margin-right: 100px;
             }
         }
@@ -178,12 +198,11 @@
             font-weight: bold;
             display: flex;
             position: absolute;
-            top: 80px;
-
+            top: 240px;
         }
         div {
             figure {
-                margin-top: 100px;
+                margin-top: 200px;
                 img {
                     width: 70vw;
                 }
@@ -196,7 +215,7 @@
                 text-decoration: none;
                 position: absolute;
                 @include button-orange;
-                bottom: 15px;
+                bottom: 70px;
                 
             }
         }
@@ -237,10 +256,12 @@
             }
         }
         .about {
-            height: 80vh;
             .page-title {
+                h4 {
+                    top: 190px;
+                }
                 hr{
-                    top: 60px;
+                    top: 215px;
                     margin-right: 100px;
                 }
             }
@@ -250,18 +271,18 @@
                 font-weight: bold;
                 display: flex;
                 position: absolute;
-                top: 80px;
+                top: 240px;
     
             }
             div {
                 figure {
-                    margin-top: 120px;
+                    margin-top: 300px;
                 }
             }
             div {
                 justify-content: center;
                 .btn-register {
-                    bottom: 10px;
+                    bottom: 15px;
                     
                 }
             }
@@ -307,14 +328,16 @@
             }
         }
         .about {
-            height: 80vh;
+            top: 190px;
+            height: 1000px;
             .page-title {
                 h4 {
-                    top: 10px;
+                    top: -10px;
+                    font-size: 30px;
                 }
                 hr{
                     top: 30px;
-                    margin-right: 100px;
+                    margin-right: 130px;
                 }
             }
             title {
@@ -324,6 +347,7 @@
             }
             div {
                 figure {
+                    margin-bottom: 395px;
                     img {
                         max-width: 35vh;
                     }
@@ -331,7 +355,7 @@
             }
             div {
                 .btn-register {
-                    bottom: 15px;
+                    bottom: 215px;
                     
                 }
             }
@@ -358,7 +382,7 @@
             .page-title {
                 h2 {
                     font-size: 35px;
-                    top: 35px;
+                    top: 30px;
                 }
                 hr {
                     top: 65px;  
@@ -387,7 +411,7 @@
             height: 100vh;
             .page-title {
                 h3 {
-                    font-size: 35px;
+                    font-size: 30px;
                     top: 35px;
                 }
                 hr {
@@ -405,16 +429,26 @@
         }
         .about {
             top: 295px;
-            height: 100vh;
+            height: 1000px;
+            .page-title {
+                h4 {
+                    font-size: 30px;
+                }
+                hr{
+                    top: 30px;
+                    margin-right: 130px;
+                }
+            }
+
             div {
                 figure {
-                    margin-top: 0px;
+                    margin-bottom: 570px;
                 }
             }
             div {
                 .btn-register {
-                    bottom: 122px;
-                    z-index: 10;
+                    bottom: 341px;
+                   
                     
                 }
             }

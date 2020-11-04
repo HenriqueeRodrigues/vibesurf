@@ -1,17 +1,27 @@
 #conect {
     width: 100%;
-    height: 100%;
+    height: 750px;
+    min-width: 320px;
+    background-image: url('../images/baners/produtos.webp');
+    background-size: cover;
+    background-position-x: 19%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space);
     position: relative;
    
     .contact {
         justify-content: center;
-        position: relative;
         align-items: center;
+        top: 15px;
         .page-title {
             width: 100vw;
             height: 50px;
             position: absolute;
-            top: -10px;
+            top: -15px;
             h1 {
             display: flex;
             position: absolute;
@@ -19,31 +29,45 @@
             font-size: 35px;
             text-align: left;
             font-weight: bold;
-            top: 18px;
+            top: 15px;
             } 
         }
         hr {
             top: 50px; 
-            margin-right: 122px;
+            margin-right: 210px;
         }
         form {
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 200px;
             margin: 1px;
+            position: absolute;
+            top: 0px;
             button {
-                bottom: 0;
-                margin-bottom: -3px;
+                margin-top: 30px;
+            }    
+            .field {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 10px;
+                input, textarea {
+                    transition: border-color .2s ease-in-out;
+                    border-radius: 5px;
+                    background-color: #F7F7F7;
+                }
             }
-
-        } 
+            button {
+                @include button-orange;
+            }
+                
+        }
     }
 }
 @media (min-width: 375px) {
     #conect {
-        top: 300px;
         .contact {
+            .page-title {
+                top: -30px;
+            }
             
             form {
                 button {

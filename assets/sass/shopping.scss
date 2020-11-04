@@ -24,6 +24,12 @@
                 margin-top: 80px;
                 a{
                     bottom:-40px;
+
+                    &:hover {
+                        border: none;
+                        border: 1px solid var(--orange);
+                        outline: none;
+                    }
                 }
             }
             .last {
@@ -44,6 +50,7 @@
             font-size: 16px;
             font-weight: normal;
             justify-content: center;
+            background-color:#FA881E;
         }
         .more {
             justify-content: flex-end;
@@ -65,6 +72,7 @@
 
 @media(min-width: 992px) {
     #shopping {
+        height: 1200px;
         .shop { 
             align-items: center ;
             .wap {
@@ -88,13 +96,15 @@
             .wap {
                 align-items: flex-end;
                 figure{
-                    top: 200px;
-                    margin:30px;
+                    top: 10px;
+                    margin:50px;
                 }
             }
             .more {
                 justify-content: flex-end;
                 align-self: flex-end;
+                bottom: 310px;
+                position: absolute;
                 a{
                     width: 70px;        
                     height: 25px;
@@ -110,19 +120,5 @@
     }
 
 }
-@media(min-width: 992px) {
-    #shopping {
-        .shop {   
-            .wap {
-                align-items: flex-end;
-                figure{
-                    top: 200px;
-                    margin:50px;
-                }
-            }
-        }
-    }
 
-
-}
 

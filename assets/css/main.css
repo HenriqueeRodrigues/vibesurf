@@ -142,18 +142,18 @@ body .contact form .field label {
   color: #7E7E7E;
   transition: color 0.2s ease-in-out;
 }
-body .contact form .field input {
+body .contact form .field input, body .contact form .field textarea {
   border: none;
-  border-bottom: 1px solid #7E7E7E;
+  border: 1px solid #CCC;
   font-size: 22px;
   transition: border-color 0.2s ease-in-out;
 }
-body .contact form .field input:focus {
+body .contact form .field input:focus, body .contact form .field textarea:focus {
   border: none;
   border-bottom: 1px solid var(--orange);
   outline: none;
 }
-body .contact form .field input:focus + label {
+body .contact form .field input:focus + label, body .contact form .field textarea:focus + label {
   color: var(--orange);
 }
 body .contact form button {
@@ -768,6 +768,14 @@ header.page-title hr {
   align-items: center;
   top: 100px;
 }
+#home .shop .wap figure a {
+  bottom: -40px;
+}
+#home .shop .wap figure a:hover {
+  border: none;
+  border: 1px solid var(--orange);
+  outline: none;
+}
 #home .shop .wap .last {
   display: none;
 }
@@ -856,6 +864,14 @@ header.page-title hr {
   top: 10px;
   margin: 10px;
 }
+#home .gallery .wap .master figure a {
+  bottom: -40px;
+}
+#home .gallery .wap .master figure a:hover {
+  border: none;
+  border-bottom: 1px solid var(--orange);
+  outline: none;
+}
 #home .gallery .wap .master .last-photo {
   display: none;
 }
@@ -892,10 +908,9 @@ header.page-title hr {
   background-color: red;
 }
 #home .about {
-  top: 195px;
   width: 100%;
   min-width: 320px;
-  height: calc(100% + 100px);
+  height: 850px;
   background-image: url("../images/baners/sobre.webp");
   background-size: cover;
   background-position-x: 65%;
@@ -907,8 +922,11 @@ header.page-title hr {
   position: relative;
   flex-direction: column;
 }
+#home .about .page-title h4 {
+  top: 190px;
+}
 #home .about .page-title hr {
-  top: 60px;
+  top: 215px;
   margin-right: 100px;
 }
 #home .about title {
@@ -916,10 +934,10 @@ header.page-title hr {
   font-weight: bold;
   display: flex;
   position: absolute;
-  top: 80px;
+  top: 240px;
 }
 #home .about div figure {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 #home .about div figure img {
   width: 70vw;
@@ -942,7 +960,7 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  bottom: 15px;
+  bottom: 70px;
 }
 #home .about div .btn-register:hover {
   background-color: var(--white);
@@ -974,11 +992,11 @@ header.page-title hr {
   #home .gallery div .btn-register {
     bottom: 50px;
   }
-  #home .about {
-    height: 80vh;
+  #home .about .page-title h4 {
+    top: 190px;
   }
   #home .about .page-title hr {
-    top: 60px;
+    top: 215px;
     margin-right: 100px;
   }
   #home .about title {
@@ -987,16 +1005,16 @@ header.page-title hr {
     font-weight: bold;
     display: flex;
     position: absolute;
-    top: 80px;
+    top: 240px;
   }
   #home .about div figure {
-    margin-top: 120px;
+    margin-top: 300px;
   }
   #home .about div {
     justify-content: center;
   }
   #home .about div .btn-register {
-    bottom: 10px;
+    bottom: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -1028,24 +1046,29 @@ header.page-title hr {
     bottom: 50px;
   }
   #home .about {
-    height: 80vh;
+    top: 190px;
+    height: 1000px;
   }
   #home .about .page-title h4 {
-    top: 10px;
+    top: -10px;
+    font-size: 30px;
   }
   #home .about .page-title hr {
     top: 30px;
-    margin-right: 100px;
+    margin-right: 130px;
   }
   #home .about title {
     font-size: 25px;
     top: 45px;
   }
+  #home .about div figure {
+    margin-bottom: 395px;
+  }
   #home .about div figure img {
     max-width: 35vh;
   }
   #home .about div .btn-register {
-    bottom: 15px;
+    bottom: 215px;
   }
 }
 @media (min-width: 992px) {
@@ -1061,7 +1084,7 @@ header.page-title hr {
   }
   #home .shop .page-title h2 {
     font-size: 35px;
-    top: 35px;
+    top: 30px;
   }
   #home .shop .page-title hr {
     top: 65px;
@@ -1084,7 +1107,7 @@ header.page-title hr {
     height: 100vh;
   }
   #home .gallery .page-title h3 {
-    font-size: 35px;
+    font-size: 30px;
     top: 35px;
   }
   #home .gallery .page-title hr {
@@ -1096,14 +1119,20 @@ header.page-title hr {
   }
   #home .about {
     top: 295px;
-    height: 100vh;
+    height: 1000px;
+  }
+  #home .about .page-title h4 {
+    font-size: 30px;
+  }
+  #home .about .page-title hr {
+    top: 30px;
+    margin-right: 130px;
   }
   #home .about div figure {
-    margin-top: 0px;
+    margin-bottom: 570px;
   }
   #home .about div .btn-register {
-    bottom: 122px;
-    z-index: 10;
+    bottom: 341px;
   }
 }
 #footer {
@@ -1200,19 +1229,29 @@ header.page-title hr {
 }
 #conect {
   width: 100%;
-  height: 100%;
+  height: 750px;
+  min-width: 320px;
+  background-image: url("../images/baners/produtos.webp");
+  background-size: cover;
+  background-position-x: 19%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space);
   position: relative;
 }
 #conect .contact {
   justify-content: center;
-  position: relative;
   align-items: center;
+  top: 15px;
 }
 #conect .contact .page-title {
   width: 100vw;
   height: 50px;
   position: absolute;
-  top: -10px;
+  top: -15px;
 }
 #conect .contact .page-title h1 {
   display: flex;
@@ -1221,27 +1260,60 @@ header.page-title hr {
   font-size: 35px;
   text-align: left;
   font-weight: bold;
-  top: 18px;
+  top: 15px;
 }
 #conect .contact hr {
   top: 50px;
-  margin-right: 122px;
+  margin-right: 210px;
 }
 #conect .contact form {
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 200px;
   margin: 1px;
+  position: absolute;
+  top: 0px;
 }
 #conect .contact form button {
-  bottom: 0;
-  margin-bottom: -3px;
+  margin-top: 30px;
+}
+#conect .contact form .field {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#conect .contact form .field input, #conect .contact form .field textarea {
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 5px;
+  background-color: #F7F7F7;
+}
+#conect .contact form button {
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: var(--black-1);
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+#conect .contact form button:hover {
+  background-color: var(--white);
+  color: black;
+  cursor: pointer;
+}
+#conect .contact form button:hover {
+  background-color: #F6B06A;
+}
+#conect .contact form button:active {
+  background-color: red;
 }
 
 @media (min-width: 375px) {
-  #conect {
-    top: 300px;
+  #conect .contact .page-title {
+    top: -30px;
   }
   #conect .contact form button {
     margin-top: 70px;
@@ -1297,6 +1369,11 @@ header.page-title hr {
 #shopping .shop .wap figure a {
   bottom: -40px;
 }
+#shopping .shop .wap figure a:hover {
+  border: none;
+  border: 1px solid var(--orange);
+  outline: none;
+}
 #shopping .shop .wap .last {
   display: none;
 }
@@ -1321,6 +1398,7 @@ header.page-title hr {
   font-size: 16px;
   font-weight: normal;
   justify-content: center;
+  background-color: #FA881E;
 }
 #shopping .shop .btn-register:hover {
   background-color: var(--white);
@@ -1346,6 +1424,9 @@ header.page-title hr {
 }
 
 @media (min-width: 992px) {
+  #shopping {
+    height: 1200px;
+  }
   #shopping .shop {
     align-items: center;
   }
@@ -1368,12 +1449,14 @@ header.page-title hr {
     align-items: flex-end;
   }
   #shopping .shop .wap figure {
-    top: 200px;
-    margin: 30px;
+    top: 10px;
+    margin: 50px;
   }
   #shopping .shop .more {
     justify-content: flex-end;
     align-self: flex-end;
+    bottom: 310px;
+    position: absolute;
   }
   #shopping .shop .more a {
     width: 70px;
@@ -1382,15 +1465,6 @@ header.page-title hr {
     font-weight: normal;
     position: absolute;
     bottom: -280px;
-  }
-}
-@media (min-width: 992px) {
-  #shopping .shop .wap {
-    align-items: flex-end;
-  }
-  #shopping .shop .wap figure {
-    top: 200px;
-    margin: 50px;
   }
 }
 #auth {
@@ -1585,6 +1659,50 @@ header.page-title hr {
     font-weight: normal;
     position: absolute;
   }
+}
+#conect .contact .page-title hr {
+  margin-right: 75px;
+}
+#conect .contact form {
+  max-width: 900px;
+}
+#conect .contact form div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#conect .contact form div a {
+  text-decoration: none;
+}
+
+#conect .contact .page-title hr {
+  margin-right: 155px;
+}
+#conect .contact form {
+  max-width: 900px;
+}
+#conect .contact form div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#conect .contact form div a {
+  text-decoration: none;
+}
+
+#conect .contact .page-title hr {
+  margin-right: 259px;
+}
+#conect .contact form {
+  max-width: 900px;
+}
+#conect .contact form div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#conect .contact form div a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=main.css.map */

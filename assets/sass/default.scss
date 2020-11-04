@@ -72,9 +72,9 @@ body {
                     color: #7E7E7E;
                     transition: color .2s ease-in-out;
                 }
-                input {
+                input, textarea {
                     border: none;
-                    border-bottom: 1px solid #7E7E7E;
+                    border: 1px solid #CCC;
                     font-size: 22px;
                     transition: border-color .2s ease-in-out;
                     &:focus {

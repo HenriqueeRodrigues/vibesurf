@@ -66,7 +66,7 @@
             </nav>
             
             <div>
-                <a href="auth.html" class="btn-register">Login</a>
+                <a href="login.html" class="btn-register">Login</a>
             </div>
 
             <div class="sociais"> 
@@ -81,34 +81,37 @@
     </header>
 
     <main id="conect">
+        
+
         <section class="contact">
+            
             <div class="page-title">
-                <h1>Fale Conosco</h1>
+                <h1>Cadastrar</h1>
                 <hr />
             </div>
 
             <form action="#" class="form">
+                <a href="index.html#home"><img src="assets/images/logo/Grupo 267.png" class="logo" alt="Logo- VibeSurf" /> </a>
 
                 <div class="field">
-                    <input type="text" id="name" name="name"/>
-                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required/>
+                     <label for="name">Nome completo</label>
                 </div>
 
                 <div class="field">
-                    <input type="email" id="email" name="email"/>
-                    <label for="email">E-mail</label>
+                    <input type="email" id="register_email" name="register_email" />
+                    <label for="register_email">E-mail</label>
                 </div>
-
                 <div class="field">
-                    <input type="phone" id="phone" name="phone"/>
+                    <input type="phone" id="phone" name="phone" />
                     <label for="phone">Telefone</label>
                 </div>
                 <div class="field">
-                    <textarea id="mensagem" name="mensagem" cols="30" rows="6"></textarea>
-                    <label for="mensagem">Mensagem</label>
+                    <input type="password" id="register_password" name="register_password" />
+                    <label for="register_password">Senha</label>
                 </div>
 
-                <button type="submit">Enviar</button>
+                <button type="submit">Confirmar</button>
 
             </form>
 
