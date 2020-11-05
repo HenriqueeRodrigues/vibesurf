@@ -237,7 +237,7 @@ hr.divider {
 #header .menu {
   transition: right 0.5s ease-in-out;
   width: 400px;
-  height: 100vh;
+  height: calc(100vh - 30px);
   padding-bottom: 50px;
   background-color: #E5E3DF;
   position: fixed;
