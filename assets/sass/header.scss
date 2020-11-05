@@ -19,7 +19,7 @@
     .menu {
         transition: right .5s ease-in-out;
         width: 400px;
-        height: calc(100vh - 30px);
+        height: 100vh;
         padding-bottom: 50px;//quando voce da um scroll no chrome para celular seu viewport muda de tamanho e o CSS não reconhece isso, então esse padding é um hack par resolver essa situação/
         background-color: #E5E3DF;
         position: fixed;
