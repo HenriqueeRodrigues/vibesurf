@@ -1,0 +1,113 @@
+
+#about-us {
+    .about {
+        width: 100%;
+        min-width: 320px;
+        height: 100%;
+        background-image: url('../images/baners/sobre.webp');
+        background-size: cover;
+        background-position-x: 65%;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space);
+        position: relative;
+        flex-direction: column;
+    
+        .one {
+            width: 100%;
+            min-width: 320px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space);
+            position: relative;
+            flex-direction: column;
+            
+            title {
+                margin-top: 50px;
+                font-weight: bold;
+                display: flex;
+                margin-top: 100px;
+                font-size: 30px;
+                text-align: center;
+                
+            }
+            div {
+                height: 100%;
+                figure {
+                    img {
+                        
+                        width: 70vw;
+                    }
+                }
+            }
+        }
+        .two {
+            width: 100%;
+            min-width: 320px;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space);
+            position: relative;
+            flex-direction: column;
+    
+            .text{
+                max-width: 500px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+
+                span {
+                    font-family: 'Open Sans';
+                    font-size: 25px;
+                    color: black;
+                }
+                p {
+                    font-size: 20px;
+                    color: var(--purple-3);
+                }
+            }
+        }
+        div {
+            justify-content: center;
+           
+            .btn-register {
+                display: flex;
+                text-decoration: none;
+                position: absolute;
+                @include button-orange; 
+                bottom: -25px;
+                
+                
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    #about-us {
+        .about {
+            flex-direction: row;
+            
+            title {
+                font-size: 25px;
+                top: 45px;
+                color: var(--orange)
+            }
+            div {
+                figure {
+                    img {
+                        max-width: 350px;
+                        
+                    }
+                }
+            }
+            
+        }    
+        
+    }
+}

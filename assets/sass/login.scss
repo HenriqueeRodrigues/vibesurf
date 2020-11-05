@@ -1,26 +1,128 @@
+
 #conect {
+    width: 100%;
+    height: 750px;
+    min-width: 320px;
+    background-image: url('../images/baners/produtos.webp');
+    background-size: cover;
+    background-position-x: 19%;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space);
+    position: relative;
+   
     .contact {
+        justify-content: center;
+        align-items: center;
+        top: 15px;
         .page-title {
-            h1 {
-
-            }
+            width: 100vw;
+            height: 50px;
+            position: absolute;
+            top: -15px;
             hr {
-                margin-right: 75px;
-
+                top: 50px; 
+                margin-right: 210px;
             }
+            h1 {
+            display: flex;
+            position: absolute;
+            color: var(--orange);
+            font-size: 35px;
+            text-align: left;
+            font-weight: bold;
+            top: 15px;
+            } 
+           
         }
         form {
-            max-width: 900px;
+            top: -50px;
+            width: 100%;
+            height: 100%;
+            margin: 1px;
+            position: absolute;
+            top: 0px;
+            button {
+                margin-top: 30px;
+                margin-left: 10px;
+            }    
+            .field {
+                flex-direction: column;
+                width: 100%;
+                margin-bottom: 10px;
+                input, textarea {
+                    transition: border-color .2s ease-in-out;
+                    border-radius: 5px;
+                    background-color: #F7F7F7;
+                }
+            }
+            img {
+                margin-bottom: 30px;
+            }
             div{
                 width: 100%;
                 flex-direction: row;
                 justify-content: space-around;
                 a{
                     text-decoration: none;
-                    
-
+                }
+            }
+            button {
+                @include button-orange;
+                background-color: #FFA500;
+            }
+                
+        }
+    }
+}
+@media (min-width: 375px) {
+    #conect {
+        .contact {
+            .page-title {
+                top: -30px;
+            }
+            
+            form {
+                button {
+                    margin-top: 70px;
+                    margin-left: 10px;
                 }
             }
         }
     }
 }
+
+@media (min-width: 768px) {
+    .contact {
+        h2 { 
+            padding: 0px 80px;
+        }
+        form {
+            padding: 40px 80px;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        main {
+            min-height: calc(100vh - calc(50px + 250px));  
+        }
+        .contact {
+            padding: 0 100px;
+            form {
+                border: 1px solid var(--gray-1);
+                margin-top: 60px;
+                padding: 40px 200px;
+               
+            }
+        }
+    }
+}
+
+
+
+

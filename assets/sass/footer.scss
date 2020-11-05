@@ -23,74 +23,131 @@
             
             li {
                 list-style: none;
-                font-size: 16px;
-                padding: .5em 0;
+                font-size: 20px;
+                flex-direction: column;
+                align-items: center;
+                
                 
                 a {
                     color: var(--footer);
                     text-decoration: none;
+                    margin: 10px;
                     img {
-                        margin-right:0px;
+                        margin-right: 10px;
                         color: var(--footer); 
                     }
                    
                 }
-                &.title {
-                    font-weight: bold;
-                    font-size: 20px;
-                }
-                &.social {
+                .social {
                     width: 100vw;
                     color: var(--footer) ;
                     justify-content: center;
                     align-items: center;
+                    justify-content: column;
                     
                     
                     a {
-                        margin: 0.5em;     
+                        //margin: 0.5em;     
                     }
                     img {
                         
                         
                     }
                 }
+                
+               
             }
             
+        }
+        .title { 
+            flex-direction: column;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .title-bold{
+            
+            flex-direction: column;
+            width: 300px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 20px;
+            align-items: flex-start;
+            margin: 10px 0;
         }
         .logo {
             margin: var(--space) 0;
         }
+        .desk-top {
+            display: none;
+        }
     }
     p {
         font-weight: bold;
-        font-size: 15px;    
+        font-size: 10px;    
    }
 }
 
 @media (min-width: 992px) {
     #footer {
-        padding-left: 100px;
-        padding-right: 100px;
+        //padding-left: 100px;
+        //padding-right: 100px;
         padding-bottom: 0;
         top: 0;
-        
+       
         .columns {
-            flex-direction: row;
-            justify-content: center;
-            width: 100%;
             
-            .links {
+            max-width: 1400px;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100vw;
+            .desk-top {
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: calc(100vh /3);  
+                font-weight: bold; 
+            }
+            .midh {
+                justify-content: center;
+                align-items: center;
+                width: calc(100vh /3);
+                .social{
+                    justify-content: center;
+                    align-items: center;
+                    margin: 10px;
+                    flex-direction: column-reverse;
+                }
+            }
+            
+            .links { 
                 display:flex;
-                width: 100px;;
+                width: calc(100vh /3);
+                align-items: flex-start;
+                margin-top: 50px;
+                ul{
+                    li{
+                        margin: 0;
+
+                    }
+                }
                 
             }
-            ul{
+            ul {
                 width: 70%;
+                .title {
+                    display: none;
+                }
                
                
                 li {
                    
                     a {
+                        margin: 0;
                         
                         &:hover {
                             color: var(--white)
@@ -98,24 +155,13 @@
                     }
                 }
             }
-            .logo {
-                margin: var(--space) 0;
-            }
-        
-        }
-    }   
-}
-@media (min-width: 1200px) {
-    #footer {    
-        .columns {
-            .links {
-            }
-            ul{
-                width: 80%; 
+            .social2 {
+                width: 290px;
+                align-items: flex-start;
                 
             }
             .logo {
-                width: 300px;
+                margin: var(--space) 0;
             }
         
         }

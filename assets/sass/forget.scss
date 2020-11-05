@@ -1,24 +1,19 @@
 #conect {
     .contact {
-        .page-title {
-            h1 {
-
-            }
-            hr {
-                margin-right: 259px;
-
-            }
-        }
+       
         form {
             max-width: 900px;
+            top: -70px;
+            img {
+                margin-bottom: 30px;
+            }
             div{
                 width: 100%;
                 flex-direction: row;
                 justify-content: space-around;
                 a{
+                    margin: 10px 0;
                     text-decoration: none;
-                    
-
                 }
             }
         }

@@ -6,13 +6,19 @@
     border: none;
     background-color: var(--orange);
     border-radius: 5px;
-    color: var(--black-1);
+    color: black;
     font-size: 19px;
     font-weight: bold;
     transition: all .3s ease-in-out;
+    a{
+        color:#F2F2F2;
+        font-weight: bold;
+        margin-left: 10px;
+
+    }
     &:hover {
         background-color: var(--white);
-        color: black;
+        color:#2E2E2E;
         
         cursor: pointer;
     }
@@ -20,6 +26,6 @@
         background-color: #F6B06A;
     }
     &:active {
-        background-color: red;
+        background-color: var(--footer);
     }
 }

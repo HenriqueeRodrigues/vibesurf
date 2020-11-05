@@ -1,6 +1,6 @@
 #gallery {
     width: 100%;
-    height: 2800px;
+    height: 100%;
     min-width: 320px;
     background-image: url('../images/baners/gallery.webp');
     background-size: cover;
@@ -13,7 +13,7 @@
     padding: var(--space);
     position: relative;
     .photo {
-        top: -70px;
+        top: -41px;
         width: 100%;
         min-width: 320px;
         flex-direction: column;
@@ -23,28 +23,35 @@
         .page-title {
             h2{
                 font-size: 30px;
-                top: -10px
+                top: 0px;
             }
             hr{
                 margin-right: 90px;
-                top: 15px;
+                top: 26px;
             }
         }
         .wap { 
             flex-direction: column;
-            
             figure {
                 justify-content: center;
                 position: relative;
                 flex-direction: column;
                 align-items: center;
-                top: 50px;
+                top: 70px;
+                margin: 15px;
+                a{
+                    img{
+                        width: 90%;
+                        &:hover {
+                            border: none;
+                            border-bottom: 1px solid var(--orange);
+                            outline: none;
+                        }
+                        
+                    }
+                }
                 
             }
-            .last-photo {
-                //display: none;
-            }
-            
             
         }
         
@@ -81,16 +88,15 @@
 
 @media(min-width: 992px) {
     #gallery {
-        height: 900px;
         .photo { 
+            height: 100%;
             align-items: center ;
-            top: 30px;
             .wap {
                 flex-direction: row;
                 align-items: flex-end;
                 figure {
                     margin: 0px;
-                    top: 0px;
+                    top: 60px;
                     margin: 5px;
                 }
             
@@ -98,10 +104,10 @@
             .page-title {
                 h2 {
                     font-size: 35px;
-                    top: -100px;
+                    top: -5px;
                 }
                 hr {
-                    top: -60px;  
+                    top: -2;  
                     margin-right: 115px;
                 }
             }

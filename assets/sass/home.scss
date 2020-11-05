@@ -14,7 +14,6 @@
         justify-content: flex-end;
         padding: var(--space);
         position: relative;
-        
         h1 {
             display: flex;
             width: 300px;
@@ -26,7 +25,12 @@
             bottom: 99px;
             margin: -21px;   
             align-items: center; 
-            justify-content: center;    
+            justify-content: center; 
+            &:hover {
+                color: #FF8C00;
+                font-size: 45px;
+            }
+              
                
         }
         hr {
@@ -43,6 +47,7 @@
             margin-right: 204px;
             
         }
+       
     }
     .shop {
         min-width: 320px;
@@ -60,7 +65,11 @@
                 align-items: center;
                 top: 100px;
                 a{
+                    margin: 30px;
                     bottom:-40px;
+                    img {
+                        width: 130px;
+                    }
 
                     &:hover {
                         border: none;
@@ -167,6 +176,7 @@
                 position: absolute;
                 @include button-orange;
                 bottom: 10px; 
+                z-index: 4;
             }
         }
     }
@@ -429,7 +439,7 @@
         }
         .about {
             top: 295px;
-            height: 1000px;
+            height: 100%;
             .page-title {
                 h4 {
                     font-size: 30px;
@@ -442,7 +452,11 @@
 
             div {
                 figure {
-                    margin-bottom: 570px;
+                    margin-top: 140px;
+                    img{
+                        width: 70vh;
+                        max-width: 400px;
+                    }
                 }
             }
             div {

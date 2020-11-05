@@ -55,6 +55,7 @@ body {
         width: 100%;
         justify-content: center;
         form {
+            max-width: 900px;
             margin-bottom: calc( var(--space) * 3 );
             flex-direction: column;
             justify-content: center;

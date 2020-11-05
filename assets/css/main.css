@@ -124,6 +124,7 @@ body .contact {
   justify-content: center;
 }
 body .contact form {
+  max-width: 900px;
   margin-bottom: calc( var(--space) * 3 );
   flex-direction: column;
   justify-content: center;
@@ -164,21 +165,26 @@ body .contact form button {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
+body .contact form button a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 body .contact form button:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 body .contact form button:hover {
   background-color: #F6B06A;
 }
 body .contact form button:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 
 hr.divider {
@@ -288,22 +294,27 @@ hr.divider {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   margin-top: 30px;
 }
+#header .menu div .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 #header .menu div .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #header .menu div .btn-register:hover {
   background-color: #F6B06A;
 }
 #header .menu div .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 #header .menu .sociais a {
   margin: 10px;
@@ -519,23 +530,28 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   min-width: 50px;
   width: 50px;
 }
+.page aside footer button a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 .page aside footer button:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 .page aside footer button:hover {
   background-color: #F6B06A;
 }
 .page aside footer button:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 .page aside footer button svg {
   transform: rotate(0deg);
@@ -609,21 +625,26 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
+.page.blue footer.fixed button[type=submit] a, .page.blue footer.fixed a.black a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 .page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 .page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
   background-color: #F6B06A;
 }
 .page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 .page.green > header {
   background-color: var(--green);
@@ -636,21 +657,26 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
 }
+.page.green footer.fixed button[type=submit] a, .page.green footer.fixed a.black a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 .page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
   background-color: #F6B06A;
 }
 .page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 
 @media (min-width: 1200px) {
@@ -737,6 +763,10 @@ header.page-title hr {
   align-items: center;
   justify-content: center;
 }
+#home > header h1:hover {
+  color: #FF8C00;
+  font-size: 45px;
+}
 #home > header hr {
   position: absolute;
   height: 70px;
@@ -769,7 +799,11 @@ header.page-title hr {
   top: 100px;
 }
 #home .shop .wap figure a {
+  margin: 30px;
   bottom: -40px;
+}
+#home .shop .wap figure a img {
+  width: 130px;
 }
 #home .shop .wap figure a:hover {
   border: none;
@@ -809,22 +843,27 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   bottom: -150px;
 }
+#home .shop div .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 #home .shop div .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #home .shop div .btn-register:hover {
   background-color: #F6B06A;
 }
 #home .shop div .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 #home .gallery {
   top: 190px;
@@ -890,22 +929,28 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   bottom: 10px;
+  z-index: 4;
+}
+#home .gallery div .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
 }
 #home .gallery div .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #home .gallery div .btn-register:hover {
   background-color: #F6B06A;
 }
 #home .gallery div .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 #home .about {
   width: 100%;
@@ -956,22 +1001,27 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   bottom: 70px;
 }
+#home .about div .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 #home .about div .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #home .about div .btn-register:hover {
   background-color: #F6B06A;
 }
 #home .about div .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 
 @media (min-width: 375px) {
@@ -1119,7 +1169,7 @@ header.page-title hr {
   }
   #home .about {
     top: 295px;
-    height: 1000px;
+    height: 100%;
   }
   #home .about .page-title h4 {
     font-size: 30px;
@@ -1129,7 +1179,11 @@ header.page-title hr {
     margin-right: 130px;
   }
   #home .about div figure {
-    margin-bottom: 570px;
+    margin-top: 140px;
+  }
+  #home .about div figure img {
+    width: 70vh;
+    max-width: 400px;
   }
   #home .about div .btn-register {
     bottom: 341px;
@@ -1161,73 +1215,115 @@ header.page-title hr {
 }
 #footer .columns ul li {
   list-style: none;
-  font-size: 16px;
-  padding: 0.5em 0;
+  font-size: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 #footer .columns ul li a {
   color: var(--footer);
   text-decoration: none;
+  margin: 10px;
 }
 #footer .columns ul li a img {
-  margin-right: 0px;
+  margin-right: 10px;
   color: var(--footer);
 }
-#footer .columns ul li.title {
-  font-weight: bold;
-  font-size: 20px;
-}
-#footer .columns ul li.social {
+#footer .columns ul li .social {
   width: 100vw;
   color: var(--footer);
   justify-content: center;
   align-items: center;
+  justify-content: column;
 }
-#footer .columns ul li.social a {
-  margin: 0.5em;
+#footer .columns .title {
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+#footer .columns .title-bold {
+  flex-direction: column;
+  width: 300px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+  align-items: flex-start;
+  margin: 10px 0;
 }
 #footer .columns .logo {
   margin: var(--space) 0;
 }
+#footer .columns .desk-top {
+  display: none;
+}
 #footer p {
   font-weight: bold;
-  font-size: 15px;
+  font-size: 10px;
 }
 
 @media (min-width: 992px) {
   #footer {
-    padding-left: 100px;
-    padding-right: 100px;
     padding-bottom: 0;
     top: 0;
   }
   #footer .columns {
+    max-width: 1400px;
     flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+  }
+  #footer .columns .desk-top {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100vh /3);
+    font-weight: bold;
+  }
+  #footer .columns .midh {
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: calc(100vh /3);
+  }
+  #footer .columns .midh .social {
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-direction: column-reverse;
   }
   #footer .columns .links {
     display: flex;
-    width: 100px;
+    width: calc(100vh /3);
+    align-items: flex-start;
+    margin-top: 50px;
+  }
+  #footer .columns .links ul li {
+    margin: 0;
   }
   #footer .columns ul {
     width: 70%;
   }
+  #footer .columns ul .title {
+    display: none;
+  }
+  #footer .columns ul li a {
+    margin: 0;
+  }
   #footer .columns ul li a:hover {
     color: var(--white);
+  }
+  #footer .columns .social2 {
+    width: 290px;
+    align-items: flex-start;
   }
   #footer .columns .logo {
     margin: var(--space) 0;
   }
 }
-@media (min-width: 1200px) {
-  #footer .columns ul {
-    width: 80%;
-  }
-  #footer .columns .logo {
-    width: 300px;
-  }
-}
-#conect {
+#conect-c {
   width: 100%;
   height: 750px;
   min-width: 320px;
@@ -1242,18 +1338,22 @@ header.page-title hr {
   padding: var(--space);
   position: relative;
 }
-#conect .contact {
+#conect-c .contact {
   justify-content: center;
   align-items: center;
   top: 15px;
 }
-#conect .contact .page-title {
+#conect-c .contact .page-title {
   width: 100vw;
   height: 50px;
   position: absolute;
   top: -15px;
 }
-#conect .contact .page-title h1 {
+#conect-c .contact .page-title hr {
+  top: 50px;
+  margin-right: 210px;
+}
+#conect-c .contact .page-title h1 {
   display: flex;
   position: absolute;
   color: var(--orange);
@@ -1262,31 +1362,39 @@ header.page-title hr {
   font-weight: bold;
   top: 15px;
 }
-#conect .contact hr {
-  top: 50px;
-  margin-right: 210px;
-}
-#conect .contact form {
+#conect-c .contact form {
   width: 100%;
   height: 100%;
   margin: 1px;
   position: absolute;
   top: 0px;
 }
-#conect .contact form button {
+#conect-c .contact form button {
   margin-top: 30px;
+  margin-left: 10px;
 }
-#conect .contact form .field {
+#conect-c .contact form .field {
   flex-direction: column;
   width: 100%;
   margin-bottom: 10px;
 }
-#conect .contact form .field input, #conect .contact form .field textarea {
+#conect-c .contact form .field input, #conect-c .contact form .field textarea {
   transition: border-color 0.2s ease-in-out;
   border-radius: 5px;
   background-color: #F7F7F7;
 }
-#conect .contact form button {
+#conect-c .contact form img {
+  margin-bottom: 30px;
+}
+#conect-c .contact form div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#conect-c .contact form div a {
+  text-decoration: none;
+}
+#conect-c .contact form button {
   width: 150px;
   height: 35px;
   justify-content: center;
@@ -1294,21 +1402,27 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
+  background-color: #FFA500;
 }
-#conect .contact form button:hover {
+#conect-c .contact form button a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
+#conect-c .contact form button:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
-#conect .contact form button:hover {
+#conect-c .contact form button:hover {
   background-color: #F6B06A;
 }
-#conect .contact form button:active {
-  background-color: red;
+#conect-c .contact form button:active {
+  background-color: var(--footer);
 }
 
 @media (min-width: 375px) {
@@ -1317,6 +1431,7 @@ header.page-title hr {
   }
   #conect .contact form button {
     margin-top: 70px;
+    margin-left: 10px;
   }
 }
 @media (min-width: 768px) {
@@ -1346,14 +1461,19 @@ header.page-title hr {
 }
 #shopping .shop {
   width: 100%;
+  height: calc(100% +50px);
   min-width: 320px;
   flex-direction: column;
   padding: var(--space);
   position: relative;
   justify-content: center;
 }
+#shopping .shop .page-title h2 {
+  top: 0px;
+}
 #shopping .shop .page-title hr {
   margin-right: 91px;
+  top: 10px;
 }
 #shopping .shop .wap {
   flex-direction: column;
@@ -1363,11 +1483,13 @@ header.page-title hr {
   position: relative;
   flex-direction: column;
   align-items: center;
-  top: 100px;
   margin-top: 80px;
 }
 #shopping .shop .wap figure a {
   bottom: -40px;
+}
+#shopping .shop .wap figure a img {
+  width: 130px;
 }
 #shopping .shop .wap figure a:hover {
   border: none;
@@ -1388,28 +1510,33 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   bottom: -32px;
-  width: 100px;
+  width: 80px;
   height: 30px;
   font-size: 16px;
   font-weight: normal;
   justify-content: center;
-  background-color: #FA881E;
+  background-color: #E5E3DF;
+}
+#shopping .shop .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
 }
 #shopping .shop .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #shopping .shop .btn-register:hover {
   background-color: #F6B06A;
 }
 #shopping .shop .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 #shopping .shop .more {
   justify-content: flex-end;
@@ -1420,7 +1547,7 @@ header.page-title hr {
   font-size: 15px;
   font-weight: normal;
   position: absolute;
-  bottom: -186px;
+  bottom: -4px;
 }
 
 @media (min-width: 992px) {
@@ -1428,6 +1555,7 @@ header.page-title hr {
     height: 1200px;
   }
   #shopping .shop {
+    height: 100%;
     align-items: center;
   }
   #shopping .shop .wap {
@@ -1538,7 +1666,7 @@ header.page-title hr {
 }
 #gallery {
   width: 100%;
-  height: 2800px;
+  height: 100%;
   min-width: 320px;
   background-image: url("../images/baners/gallery.webp");
   background-size: cover;
@@ -1552,7 +1680,7 @@ header.page-title hr {
   position: relative;
 }
 #gallery .photo {
-  top: -70px;
+  top: -41px;
   width: 100%;
   min-width: 320px;
   flex-direction: column;
@@ -1562,11 +1690,11 @@ header.page-title hr {
 }
 #gallery .photo .page-title h2 {
   font-size: 30px;
-  top: -10px;
+  top: 0px;
 }
 #gallery .photo .page-title hr {
   margin-right: 90px;
-  top: 15px;
+  top: 26px;
 }
 #gallery .photo .wap {
   flex-direction: column;
@@ -1576,7 +1704,16 @@ header.page-title hr {
   position: relative;
   flex-direction: column;
   align-items: center;
-  top: 50px;
+  top: 70px;
+  margin: 15px;
+}
+#gallery .photo .wap figure a img {
+  width: 90%;
+}
+#gallery .photo .wap figure a img:hover {
+  border: none;
+  border-bottom: 1px solid var(--orange);
+  outline: none;
 }
 #gallery .photo .btn-register {
   display: flex;
@@ -1589,7 +1726,7 @@ header.page-title hr {
   border: none;
   background-color: var(--orange);
   border-radius: 5px;
-  color: var(--black-1);
+  color: black;
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
@@ -1600,16 +1737,21 @@ header.page-title hr {
   font-weight: normal;
   justify-content: center;
 }
+#gallery .photo .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
 #gallery .photo .btn-register:hover {
   background-color: var(--white);
-  color: black;
+  color: #2E2E2E;
   cursor: pointer;
 }
 #gallery .photo .btn-register:hover {
   background-color: #F6B06A;
 }
 #gallery .photo .btn-register:active {
-  background-color: red;
+  background-color: var(--footer);
 }
 #gallery .photo .more {
   justify-content: flex-end;
@@ -1624,12 +1766,9 @@ header.page-title hr {
 }
 
 @media (min-width: 992px) {
-  #gallery {
-    height: 900px;
-  }
   #gallery .photo {
+    height: 100%;
     align-items: center;
-    top: 30px;
   }
   #gallery .photo .wap {
     flex-direction: row;
@@ -1637,15 +1776,15 @@ header.page-title hr {
   }
   #gallery .photo .wap figure {
     margin: 0px;
-    top: 0px;
+    top: 60px;
     margin: 5px;
   }
   #gallery .photo .page-title h2 {
     font-size: 35px;
-    top: -100px;
+    top: -5px;
   }
   #gallery .photo .page-title hr {
-    top: -60px;
+    top: -2;
     margin-right: 115px;
   }
   #gallery .photo .more {
@@ -1660,11 +1799,69 @@ header.page-title hr {
     position: absolute;
   }
 }
+#conect {
+  width: 100%;
+  height: 750px;
+  min-width: 320px;
+  background-image: url("../images/baners/produtos.webp");
+  background-size: cover;
+  background-position-x: 19%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space);
+  position: relative;
+}
+#conect .contact {
+  justify-content: center;
+  align-items: center;
+  top: 15px;
+}
+#conect .contact .page-title {
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  top: -15px;
+}
 #conect .contact .page-title hr {
-  margin-right: 75px;
+  top: 50px;
+  margin-right: 210px;
+}
+#conect .contact .page-title h1 {
+  display: flex;
+  position: absolute;
+  color: var(--orange);
+  font-size: 35px;
+  text-align: left;
+  font-weight: bold;
+  top: 15px;
 }
 #conect .contact form {
-  max-width: 900px;
+  top: -50px;
+  width: 100%;
+  height: 100%;
+  margin: 1px;
+  position: absolute;
+  top: 0px;
+}
+#conect .contact form button {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+#conect .contact form .field {
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#conect .contact form .field input, #conect .contact form .field textarea {
+  transition: border-color 0.2s ease-in-out;
+  border-radius: 5px;
+  background-color: #F7F7F7;
+}
+#conect .contact form img {
+  margin-bottom: 30px;
 }
 #conect .contact form div {
   width: 100%;
@@ -1672,37 +1869,199 @@ header.page-title hr {
   justify-content: space-around;
 }
 #conect .contact form div a {
+  text-decoration: none;
+}
+#conect .contact form button {
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  background-color: #FFA500;
+}
+#conect .contact form button a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
+#conect .contact form button:hover {
+  background-color: var(--white);
+  color: #2E2E2E;
+  cursor: pointer;
+}
+#conect .contact form button:hover {
+  background-color: #F6B06A;
+}
+#conect .contact form button:active {
+  background-color: var(--footer);
+}
+
+@media (min-width: 375px) {
+  #conect .contact .page-title {
+    top: -30px;
+  }
+  #conect .contact form button {
+    margin-top: 70px;
+    margin-left: 10px;
+  }
+}
+@media (min-width: 768px) {
+  .contact h2 {
+    padding: 0px 80px;
+  }
+  .contact form {
+    padding: 40px 80px;
+  }
+}
+@media (min-width: 1200px) {
+  body main {
+    min-height: calc(100vh - calc(50px + 250px));
+  }
+  body .contact {
+    padding: 0 100px;
+  }
+  body .contact form {
+    border: 1px solid var(--gray-1);
+    margin-top: 60px;
+    padding: 40px 200px;
+  }
+}
+#conect .contact form {
+  max-width: 900px;
+  top: -70px;
+}
+#conect .contact form img {
+  margin-bottom: 30px;
+}
+#conect .contact form div {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#conect .contact form div a {
+  margin: 10px 0;
   text-decoration: none;
 }
 
-#conect .contact .page-title hr {
-  margin-right: 155px;
-}
-#conect .contact form {
-  max-width: 900px;
-}
-#conect .contact form div {
+#about-us .about {
   width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
+  min-width: 320px;
+  height: 100%;
+  background-image: url("../images/baners/sobre.webp");
+  background-size: cover;
+  background-position-x: 65%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space);
+  position: relative;
+  flex-direction: column;
 }
-#conect .contact form div a {
+#about-us .about .one {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space);
+  position: relative;
+  flex-direction: column;
+}
+#about-us .about .one title {
+  margin-top: 50px;
+  font-weight: bold;
+  display: flex;
+  margin-top: 100px;
+  font-size: 30px;
+  text-align: center;
+}
+#about-us .about .one div {
+  height: 100%;
+}
+#about-us .about .one div figure img {
+  width: 70vw;
+}
+#about-us .about .two {
+  width: 100%;
+  min-width: 320px;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space);
+  position: relative;
+  flex-direction: column;
+}
+#about-us .about .two .text {
+  max-width: 500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+#about-us .about .two .text span {
+  font-family: "Open Sans";
+  font-size: 25px;
+  color: black;
+}
+#about-us .about .two .text p {
+  font-size: 20px;
+  color: var(--purple-3);
+}
+#about-us .about div {
+  justify-content: center;
+}
+#about-us .about div .btn-register {
+  display: flex;
   text-decoration: none;
+  position: absolute;
+  width: 150px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: var(--orange);
+  border-radius: 5px;
+  color: black;
+  font-size: 19px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  bottom: -25px;
+}
+#about-us .about div .btn-register a {
+  color: #F2F2F2;
+  font-weight: bold;
+  margin-left: 10px;
+}
+#about-us .about div .btn-register:hover {
+  background-color: var(--white);
+  color: #2E2E2E;
+  cursor: pointer;
+}
+#about-us .about div .btn-register:hover {
+  background-color: #F6B06A;
+}
+#about-us .about div .btn-register:active {
+  background-color: var(--footer);
 }
 
-#conect .contact .page-title hr {
-  margin-right: 259px;
-}
-#conect .contact form {
-  max-width: 900px;
-}
-#conect .contact form div {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-around;
-}
-#conect .contact form div a {
-  text-decoration: none;
+@media (min-width: 992px) {
+  #about-us .about {
+    flex-direction: row;
+  }
+  #about-us .about title {
+    font-size: 25px;
+    top: 45px;
+    color: var(--orange);
+  }
+  #about-us .about div figure img {
+    max-width: 350px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
