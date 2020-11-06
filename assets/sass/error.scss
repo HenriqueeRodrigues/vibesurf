@@ -1,66 +1,90 @@
 #error {
     section {
+        
         width: 100%;
         height: 600px;
         min-width: 320px;
-        background-image: url('../images/baners/caldo.webp');
+        background-image: url('../images/baners/404.webp') ;
         background-size: cover;
         background-position-x: 53%;
         background-position-y: center;
         background-repeat: no-repeat;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
+        align-items: flex-end;
         padding: var(--space);
         position: relative;
-        filter: brightness(60%);
-        
-        span {
-            width: 100%;
-            color: var(--test);
-            font-size: 30px;
-            font-weight: bold;
-            position: absolute;
-            top: 35px;
-            margin-left: 10px;
-        }
-        h1{
-            font-size: 140px;
-            margin: 0;
-            margin-top: 124px;
-            justify-content: flex-start;
-            font-weight: 1000;
-            flex-direction: column;
-            margin-left: -18px;
-            color: var(--test);
-        }
-        h2 {
-            position: absolute;
-        }
+    
         div{
-            flex-direction: row;
-            margin-top: 50px;
-            width: 100%;
-            height: 100px;
+            width: 80%;
+            position: relative;
+            flex-direction: column;
+            //background-color: chartreuse;
+            margin-top: -300px;
+            
 
-            p{
-                width: 100%;
-                color: var(--orange);
+            
+            h1{
                 font-size: 30px;
+                margin: 0;
+                justify-content: flex-start;
                 font-weight: bold;
-                
-                color: var(--test);
+                color:black;
+                margin: 5px 0;
+            
             }
-            .btn-register {
-                display: flex;
-                text-decoration: none;
-                position: absolute;
-                @include button-orange; 
-                width: 100px;
-                height: 30px;
-                font-size: 16px;
-                font-weight: normal;
-                justify-content: center;
+            h2 {
+                margin: 0;
+                font-size: 20px;
+                width: 100%;
+                margin: 5px 0;
+                .btn-register {
+                    display: flex;
+                    text-decoration: none;
+                    position: absolute;
+                    @include button-orange; 
+                    background-color: transparent;
+                    border: 1px solid var(--orange);
+                    width: 150px;
+                    height: 40px;
+                    font-size: 16px;
+                    font-weight: normal;
+                    justify-content: center;
+                    right: 100px;
+                    color: var(--orange);
+                    margin-right: -29px;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 768px) {
+
+    #error {
+        section {
+            div{
+                width: 40%;
+            }
+        }
+    }
+}
+@media(min-width: 768px) {
+
+    #error {
+        section {
+            div{
+                width: 33%;
+            }
+        }
+    }
+}
+@media(min-width: 1200px) {
+
+    #error {
+        section {
+            div{
+                width: 28%;
             }
         }
     }

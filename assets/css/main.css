@@ -2068,54 +2068,38 @@ header.page-title hr {
   width: 100%;
   height: 600px;
   min-width: 320px;
-  background-image: url("../images/baners/caldo.webp");
+  background-image: url("../images/baners/404.webp");
   background-size: cover;
   background-position-x: 53%;
   background-position-y: center;
   background-repeat: no-repeat;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-end;
   padding: var(--space);
   position: relative;
-  filter: brightness(60%);
-}
-#error section span {
-  width: 100%;
-  color: var(--test);
-  font-size: 30px;
-  font-weight: bold;
-  position: absolute;
-  top: 35px;
-  margin-left: 10px;
-}
-#error section h1 {
-  font-size: 140px;
-  margin: 0;
-  margin-top: 124px;
-  justify-content: flex-start;
-  font-weight: 1000;
-  flex-direction: column;
-  margin-left: -18px;
-  color: var(--test);
-}
-#error section h2 {
-  position: absolute;
 }
 #error section div {
-  flex-direction: row;
-  margin-top: 50px;
-  width: 100%;
-  height: 100px;
+  width: 80%;
+  position: relative;
+  flex-direction: column;
+  margin-top: -300px;
 }
-#error section div p {
-  width: 100%;
-  color: var(--orange);
+#error section div h1 {
   font-size: 30px;
+  margin: 0;
+  justify-content: flex-start;
   font-weight: bold;
-  color: var(--test);
+  color: black;
+  margin: 5px 0;
 }
-#error section div .btn-register {
+#error section div h2 {
+  margin: 0;
+  font-size: 20px;
+  width: 100%;
+  margin: 5px 0;
+}
+#error section div h2 .btn-register {
   display: flex;
   text-decoration: none;
   position: absolute;
@@ -2130,27 +2114,48 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  width: 100px;
-  height: 30px;
+  background-color: transparent;
+  border: 1px solid var(--orange);
+  width: 150px;
+  height: 40px;
   font-size: 16px;
   font-weight: normal;
   justify-content: center;
+  right: 100px;
+  color: var(--orange);
+  margin-right: -29px;
 }
-#error section div .btn-register a {
+#error section div h2 .btn-register a {
   color: #F2F2F2;
   font-weight: bold;
   margin-left: 10px;
 }
-#error section div .btn-register:hover {
+#error section div h2 .btn-register:hover {
   background-color: var(--white);
   color: #2E2E2E;
   cursor: pointer;
 }
-#error section div .btn-register:hover {
+#error section div h2 .btn-register:hover {
   background-color: #F6B06A;
 }
-#error section div .btn-register:active {
+#error section div h2 .btn-register:active {
   background-color: var(--footer);
+}
+
+@media (min-width: 768px) {
+  #error section div {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
+  #error section div {
+    width: 33%;
+  }
+}
+@media (min-width: 1200px) {
+  #error section div {
+    width: 28%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
