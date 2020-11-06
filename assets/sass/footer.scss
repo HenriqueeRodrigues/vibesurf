@@ -15,6 +15,7 @@
             display: none;
 
         }
+
         ul{
             padding: 0;
             flex-direction: column;
@@ -34,28 +35,30 @@
                     margin: 10px;
                     img {
                         margin-right: 10px;
-                        color: var(--footer); 
+                        color: var(--footer);
+                        width: 25px;
+                        height: 25px;
                     }
                    
                 }
-                .social {
-                    width: 100vw;
-                    color: var(--footer) ;
-                    justify-content: center;
-                    align-items: center;
-                    justify-content: column;
-                    
-                    
-                    a {
-                        //margin: 0.5em;     
-                    }
-                    img {
-                        
-                        
+               
+            }
+            li.social {
+                div{
+                    a{
+                        img{
+                            width: 50px;
+                            height: 50px;
+                        }
                     }
                 }
-                
-               
+                a.logo {
+                    img{
+                        width: 100px;
+                        height: 83px;
+
+                    }
+                }
             }
             
         }
@@ -77,9 +80,6 @@
             font-size: 20px;
             align-items: flex-start;
             margin: 10px 0;
-        }
-        .logo {
-            margin: var(--space) 0;
         }
         .desk-top {
             display: none;
@@ -116,11 +116,13 @@
                 justify-content: center;
                 align-items: center;
                 width: calc(100vh /3);
+               
                 .social{
                     justify-content: center;
                     align-items: center;
                     margin: 10px;
                     flex-direction: column-reverse;
+                   
                 }
             }
             
@@ -158,6 +160,12 @@
             .social2 {
                 width: 290px;
                 align-items: flex-start;
+                a{
+                    img {
+                        width:30px;
+                        height: 30px;
+                    }
+                }
                 
             }
             .logo {
