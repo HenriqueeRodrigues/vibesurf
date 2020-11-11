@@ -1691,9 +1691,6 @@ header.page-title hr {
   width: 130px;
 }
 #shopping .shop .wap figure a:hover {
-  border: none;
-  border: 1px solid var(--orange);
-  outline: none;
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
