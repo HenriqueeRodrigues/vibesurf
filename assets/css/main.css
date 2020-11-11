@@ -502,7 +502,7 @@ hr.divider {
     width: calc(100vw -150px);
     position: absolute;
     flex-direction: row;
-    margin-top: -50px;
+    margin-top: -35px;
     justify-content: center;
   }
   #header .menu nav ul li a {
@@ -984,7 +984,7 @@ header.page-title hr {
   top: 190px;
   width: 100%;
   min-width: 320px;
-  height: calc(100vh + 200px);
+  height: calc(100vh + 100px);
   background-image: url("../images/baners/gallery.webp");
   background-size: cover;
   background-position-x: 29%;
@@ -1015,19 +1015,19 @@ header.page-title hr {
   position: relative;
   flex-direction: column;
   align-items: center;
-  top: 10px;
+  top: 60px;
   margin: 10px;
 }
 #home .gallery .wap .master figure a {
   bottom: -40px;
 }
 #home .gallery .wap .master figure a img.tall {
-  width: 145px;
-  height: 200px;
+  width: 95px;
+  height: 150px;
 }
 #home .gallery .wap .master figure a img.to-lay {
-  width: 210px;
-  height: 140px;
+  width: 160px;
+  height: 90px;
 }
 #home .gallery .wap .master figure a:hover {
   border: none;
@@ -1036,6 +1036,26 @@ header.page-title hr {
 }
 #home .gallery .wap .master .last-photo {
   display: none;
+}
+#home .gallery .call {
+  width: 100%;
+  align-items: center;
+  margin: 60px 0;
+}
+#home .gallery .call a {
+  width: 100%;
+  text-decoration: none;
+  align-items: center;
+  border-radius: 5px;
+}
+#home .gallery .call a span {
+  display: flex;
+  margin: 10px;
+  font-size: 19px;
+  color: var(--orange);
+  font-weight: bolder;
+  justify-content: center;
+  text-align: center;
 }
 #home .gallery div {
   justify-content: center;
@@ -1081,7 +1101,7 @@ header.page-title hr {
   height: 850px;
   background-image: url("../images/baners/sobre.webp");
   background-size: cover;
-  background-position-x: 65%;
+  background-position-x: 7%;
   background-position-y: center;
   background-repeat: no-repeat;
   align-items: center;
@@ -1160,10 +1180,28 @@ header.page-title hr {
     top: 90px;
   }
   #home .gallery .wap .master figure {
-    top: -10px;
+    top: 0px;
+  }
+  #home .gallery .wap .master figure a img.tall {
+    width: 145px;
+    height: 200px;
+  }
+  #home .gallery .wap .master figure a img.to-lay {
+    width: 210px;
+    height: 140px;
+  }
+  #home .gallery .wap .master figure a:hover {
+    border: none;
+    border-bottom: 1px solid var(--orange);
+    outline: none;
+  }
+  #home .gallery .call {
+    width: 100%;
+    align-items: center;
+    margin-top: -60px;
   }
   #home .gallery div .btn-register {
-    bottom: 50px;
+    margin-bottom: 15px;
   }
   #home .about .page-title h4 {
     top: 190px;
@@ -1202,9 +1240,10 @@ header.page-title hr {
     bottom: -150px;
   }
   #home .gallery {
-    height: 70vh;
+    height: 60vh;
   }
   #home .gallery .wap {
+    height: 50%;
     flex-direction: row;
   }
   #home .gallery .wap .master {
@@ -1212,8 +1251,23 @@ header.page-title hr {
     align-items: flex-end;
   }
   #home .gallery .wap .master figure {
-    top: 0;
+    top: -70px;
     margin: 30px;
+  }
+  #home .gallery .call {
+    margin: 0;
+  }
+  #home .gallery .call a {
+    width: auto;
+  }
+  #home .gallery .call a span {
+    margin: 10px;
+    font-size: 19px;
+  }
+  #home .gallery .call a span:hover {
+    border: none;
+    border-bottom: 1px solid var(--orange);
+    outline: none;
   }
   #home .gallery div .btn-register {
     bottom: 50px;
@@ -1277,7 +1331,7 @@ header.page-title hr {
   }
   #home .gallery {
     top: 290px;
-    height: 100vh;
+    height: 100%;
   }
   #home .gallery .page-title h3 {
     font-size: 30px;
@@ -1287,8 +1341,26 @@ header.page-title hr {
     top: 70px;
     margin-right: 320px;
   }
+  #home .gallery .wap .master figure {
+    top: 105px;
+  }
   #home .gallery .wap .master .last-photo {
     display: flex;
+  }
+  #home .gallery .call {
+    margin: 100px 0;
+  }
+  #home .gallery .call a {
+    width: auto;
+  }
+  #home .gallery .call a span {
+    margin: 10px;
+    font-size: 19px;
+  }
+  #home .gallery .call a span:hover {
+    border: none;
+    border-bottom: 1px solid var(--orange);
+    outline: none;
   }
   #home .about {
     top: 295px;
@@ -1622,6 +1694,9 @@ header.page-title hr {
   border: none;
   border: 1px solid var(--orange);
   outline: none;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #shopping .shop .wap .last {
   display: none;
@@ -1841,6 +1916,9 @@ header.page-title hr {
   border: none;
   border-bottom: 1px solid var(--orange);
   outline: none;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 #gallery .photo .btn-register {
   display: flex;
@@ -1857,11 +1935,6 @@ header.page-title hr {
   font-size: 19px;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  bottom: -32px;
-  width: 100px;
-  height: 30px;
-  font-size: 16px;
-  font-weight: normal;
   justify-content: center;
 }
 #gallery .photo .btn-register a {
@@ -1884,14 +1957,55 @@ header.page-title hr {
   justify-content: flex-end;
 }
 #gallery .photo .more a {
-  width: 70px;
-  height: 25px;
+  width: 130px;
+  height: 30px;
   font-size: 15px;
   font-weight: normal;
   position: absolute;
   bottom: -60px;
+  margin-bottom: 10px;
+}
+#gallery .photo .trailer {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#gallery .photo .trailer h3, #gallery .photo .trailer small {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 100px;
+  flex-direction: column;
+  margin-bottom: auto;
+  text-align: center;
+}
+#gallery .photo .trailer small {
+  margin: 0;
+  color: var(--orange);
+  margin-bottom: 20px;
+}
+#gallery .photo .trailer video {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 720px;
+  border-radius: 5px;
+}
+#gallery .photo .trailer video:hover {
+  border: none;
+  border: 0.5px solid var(--orange);
+  outline: none;
 }
 
+@media (min-width: 768px) {
+  #gallery .photo .trailer h3, #gallery .photo .trailer small {
+    font-size: 30px;
+    margin-top: 150px;
+  }
+  #gallery .photo .trailer small {
+    margin: 0;
+    color: var(--orange);
+    margin-bottom: 30px;
+  }
+}
 @media (min-width: 992px) {
   #gallery .photo {
     height: 100%;
@@ -1917,13 +2031,6 @@ header.page-title hr {
   #gallery .photo .more {
     justify-content: flex-end;
     align-self: flex-end;
-  }
-  #gallery .photo .more a {
-    width: 70px;
-    height: 25px;
-    font-size: 15px;
-    font-weight: normal;
-    position: absolute;
   }
 }
 #conect {

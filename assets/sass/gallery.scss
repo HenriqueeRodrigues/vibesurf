@@ -46,6 +46,10 @@
                             border: none;
                             border-bottom: 1px solid var(--orange);
                             outline: none;
+                            -moz-transform: scale(1.1);
+                            -webkit-transform: scale(1.1);
+                            transform: scale(1.1);
+                            
                         }
                         
                     }
@@ -60,30 +64,75 @@
             text-decoration: none;
             position: absolute;
             @include button-orange;
-            bottom: -32px; 
-            width: 100px;
-            height: 30px;
-            font-size: 16px;
-            font-weight: normal;
             justify-content: center;
         }
         .more {
             justify-content: flex-end;
             a{
-                width: 70px;        
-                height: 25px;
+                width: 130px;        
+                height: 30px;
                 font-size: 15px;
                 font-weight: normal;
                 position: absolute;
                 bottom: -60px;
+                margin-bottom: 10px;
 
             }
         }
-        
-        
+        .trailer{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3, small {
+                font-weight: bold;
+                font-size: 20px;
+                margin-top: 100px;
+                flex-direction: column;
+                margin-bottom: auto;
+                text-align: center;
+            } 
+            small {
+                margin: 0;
+                color: var(--orange);
+                margin-bottom: 20px;
+            }
+            video {
+                width: 100%;
+                margin: 0 auto;
+                max-width: 720px;
+                border-radius: 5px;
+                &:hover {
+                    border: none;
+                    border: 0.5px solid var(--orange);
+                    outline: none;
+                }
+                
+            }    
+        }
     }
-   
 }
+@media(min-width: 768px) {
+    #gallery {
+        .photo {
+            .trailer{
+        
+                h3, small {
+                   
+                    font-size: 30px;
+                    margin-top: 150px;
+                } 
+                small {
+                    margin: 0;
+                    color: var(--orange);
+                    margin-bottom: 30px;
+                }
+            }
+
+        }
+    }
+    
+}
+
 
 
 @media(min-width: 992px) {
@@ -115,13 +164,7 @@
             .more {
                 justify-content: flex-end;
                 align-self: flex-end;
-                a{
-                    width: 70px;        
-                    height: 25px;
-                    font-size: 15px;
-                    font-weight: normal;
-                    position: absolute;
-                }
+                
             }
         }
         
