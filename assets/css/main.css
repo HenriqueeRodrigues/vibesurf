@@ -51,22 +51,8 @@
   --white: #fff;
   --orange:#FE8206;
   --test:#ffc663;
-  --purple-2: #723F94;
-  --purple-3: #875BA4;
-  --purple-4: #B49AC6;
-  --purple-5: #C2C1D9;
-  --purple-6: #DED2E6;
-  --pink-1: #EA079E;
-  --pink-2: #F8F0F0;
   --footer: #414144;
-  --gray-2: #F2F2F2;
-  --gray-3: #CCCCCC;
-  --gray-4: #AF9DBA;
-  --gray-5: #F5F5F5;
-  --gray-6: #8A8888;
   --orange-1: #ffc663;
-  --blue-1: #353383;
-  --blue-2: #5c5aa4;
   --black-1: #000000bf;
   --space: 20px;
 }
@@ -529,293 +515,6 @@ hr.divider {
 @media (min-width: 1200px) {
   #header .menu nav ul li a {
     margin: 0 30px;
-  }
-}
-header.page-title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
-  color: var(--green);
-  margin: 0;
-  font-size: 23px;
-  font-weight: 600;
-}
-header.page-title hr {
-  width: 68px;
-  border: none;
-  border-top: 4px solid var(--red);
-  margin: 10px 0;
-}
-
-.page {
-  flex-direction: column;
-  height: calc(100vh - 140px);
-  overflow: auto;
-}
-.page aside {
-  width: 100%;
-  position: fixed;
-  z-index: 2;
-  right: 0;
-  bottom: 80px;
-  height: 50px;
-  background-color: var(--gray-12);
-  border-bottom: var(--gray-3) 1px solid;
-  flex-direction: column;
-  transition: all 0.2s ease-in-out;
-}
-.page aside header {
-  font-size: 32px;
-  color: var(--dark-0);
-  height: 130px;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
-.page aside section {
-  padding: 0 var(--space);
-  display: none;
-  flex: 1;
-  max-height: calc(100vh - 339px);
-  overflow-y: auto;
-}
-.page aside section table {
-  border-collapse: collapse;
-  width: 100%;
-  border-bottom: var(--gray-3) 1px solid;
-}
-.page aside section table td {
-  padding: var(--space) 0;
-  border-top: var(--gray-3) 1px solid;
-}
-.page aside section table td.price {
-  text-align: right;
-}
-.page aside footer {
-  height: 50px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space);
-  font-size: 18px;
-  color: var(--dark-0);
-}
-.page aside footer .total {
-  font-weight: bold;
-  margin-left: var(--space);
-  text-align: right;
-}
-.page aside footer button {
-  width: 150px;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: var(--orange);
-  border-radius: 5px;
-  color: black;
-  font-size: 19px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-  min-width: 50px;
-  width: 50px;
-}
-.page aside footer button a {
-  color: #F2F2F2;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.page aside footer button:hover {
-  background-color: var(--white);
-  color: #2E2E2E;
-  cursor: pointer;
-}
-.page aside footer button:hover {
-  background-color: #F6B06A;
-}
-.page aside footer button:active {
-  background-color: var(--footer);
-}
-.page aside footer button svg {
-  transform: rotate(0deg);
-  transition: all 0.3s ease-in-out;
-}
-.page aside.open {
-  height: calc(100vh - 158px);
-}
-.page aside.open header, .page aside.open section {
-  display: flex;
-}
-.page aside.open footer button svg {
-  transform: rotate(180deg);
-}
-.page .page-title {
-  margin: var(--space);
-  width: calc(100% - calc(var(--space) * 2));
-}
-.page > header {
-  width: 100%;
-  min-height: 130px;
-  background-color: var(--black);
-  color: var(--white);
-  justify-content: center;
-  align-items: center;
-  margin-top: 18px;
-}
-.page > header h1 {
-  font-size: 23px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-.page > header h1 small {
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-}
-.page > main {
-  margin-bottom: 80px;
-  flex-direction: column;
-}
-.page > main .toast {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 3;
-}
-.page > main .toast.open {
-  transform: translateY(-80px);
-}
-.page footer.fixed {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  background-color: var(--gray-12);
-  height: 80px;
-  left: 0;
-  justify-content: space-between;
-  align-items: center;
-  padding: var(--space);
-  z-index: 4;
-}
-.page.blue > header {
-  background-color: var(--blue);
-}
-.page.blue footer.fixed button[type=submit], .page.blue footer.fixed a.black {
-  width: 150px;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: var(--orange);
-  border-radius: 5px;
-  color: black;
-  font-size: 19px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-}
-.page.blue footer.fixed button[type=submit] a, .page.blue footer.fixed a.black a {
-  color: #F2F2F2;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
-  background-color: var(--white);
-  color: #2E2E2E;
-  cursor: pointer;
-}
-.page.blue footer.fixed button[type=submit]:hover, .page.blue footer.fixed a.black:hover {
-  background-color: #F6B06A;
-}
-.page.blue footer.fixed button[type=submit]:active, .page.blue footer.fixed a.black:active {
-  background-color: var(--footer);
-}
-.page.green > header {
-  background-color: var(--green);
-}
-.page.green footer.fixed button[type=submit], .page.green footer.fixed a.black {
-  width: 150px;
-  height: 35px;
-  justify-content: center;
-  align-items: center;
-  border: none;
-  background-color: var(--orange);
-  border-radius: 5px;
-  color: black;
-  font-size: 19px;
-  font-weight: bold;
-  transition: all 0.3s ease-in-out;
-}
-.page.green footer.fixed button[type=submit] a, .page.green footer.fixed a.black a {
-  color: #F2F2F2;
-  font-weight: bold;
-  margin-left: 10px;
-}
-.page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
-  background-color: var(--white);
-  color: #2E2E2E;
-  cursor: pointer;
-}
-.page.green footer.fixed button[type=submit]:hover, .page.green footer.fixed a.black:hover {
-  background-color: #F6B06A;
-}
-.page.green footer.fixed button[type=submit]:active, .page.green footer.fixed a.black:active {
-  background-color: var(--footer);
-}
-
-@media (min-width: 1200px) {
-  header.page-title h1, header.page-title h2, header.page-title h3, header.page-title h4, header.page-title h5, header.page-title h6 {
-    font-size: 30px;
-  }
-
-  .page aside, .page aside.open {
-    width: 375px;
-    height: calc(100vh - 118px);
-    bottom: 0;
-    z-index: 4;
-  }
-  .page aside header, .page aside section, .page aside.open header, .page aside.open section {
-    display: flex;
-  }
-  .page aside header, .page aside.open header {
-    height: 160px;
-  }
-  .page aside footer, .page aside.open footer {
-    height: 80px;
-  }
-  .page aside footer > div, .page aside.open footer > div {
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 22px;
-  }
-  .page aside footer > div .total, .page aside.open footer > div .total {
-    font-size: 29px;
-  }
-  .page aside footer button, .page aside.open footer button {
-    display: none;
-  }
-  .page > header {
-    justify-content: flex-start;
-    padding-left: 185px;
-    min-height: 160px;
-  }
-  .page > header h1 {
-    font-size: 32px;
-  }
-  .page footer.fixed {
-    justify-content: flex-start;
-  }
-  .page footer.fixed button + button, .page footer.fixed a + a, .page footer.fixed button + a, .page footer.fixed a + button {
-    margin-right: var(--space);
-  }
-  .page footer.fixed button, .page footer.fixed a {
-    order: 1;
-  }
-  .page footer.fixed button:first-child, .page footer.fixed a:first-child {
-    order: 2;
   }
 }
 #home {
@@ -1660,12 +1359,13 @@ header.page-title hr {
 }
 #shopping .shop {
   width: 100%;
-  height: calc(100% +50px);
+  height: calc(100% + 50px);
   min-width: 320px;
   flex-direction: column;
   padding: var(--space);
   position: relative;
   justify-content: center;
+  padding-bottom: 80px;
 }
 #shopping .shop .page-title h2 {
   top: 0px;
@@ -1746,7 +1446,7 @@ header.page-title hr {
   font-size: 15px;
   font-weight: normal;
   position: absolute;
-  bottom: -4px;
+  bottom: 10px;
 }
 
 @media (min-width: 992px) {
@@ -2206,12 +1906,11 @@ header.page-title hr {
   flex-direction: column;
 }
 #about-us .about .one title {
-  margin-top: 50px;
   font-weight: bold;
   display: flex;
-  margin-top: 100px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
+  color: var(--orange);
 }
 #about-us .about .one div {
   height: 100%;

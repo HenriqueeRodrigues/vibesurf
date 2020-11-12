@@ -3,12 +3,13 @@
     position: relative;
     .shop {
         width: 100%;
-        height: calc(100% +50px);
+        height: calc(100% + 50px);
         min-width: 320px;
         flex-direction: column;
         padding: var(--space);
         position: relative;
         justify-content: center;
+        padding-bottom: 80px;
         .page-title {
             h2{
                 top:0px;
@@ -69,7 +70,7 @@
                 font-size: 15px;
                 font-weight: normal;
                 position: absolute;
-                bottom: -4px;
+                bottom: 10px;
 
             }
         }
