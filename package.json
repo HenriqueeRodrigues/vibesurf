@@ -1,11 +1,12 @@
 {
   "name": "VIBESURF",
   "version": "1.0.0",
-  "description": "Website da Petshop Amicão",
-  "main": "index.html",
+  "description": "Vibe surf",
   "scripts": {
-    "sass": "sass --watch assets/sass/main.scss:assets/css/main.css",
-    "build": "sass assets/sass/main.scss:assets/css/main.css --style=compressed"
+    "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
+    "build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
+    "prod": "webpack --mode=production",
+    "dev": "webpack serve --content-base public --hot"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,10 @@
   "homepage": "https://github.com/HenriqueeRodrigues/vibesurf.git",
   "dependencies": {
     "sass": "^1.27.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.28.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }
