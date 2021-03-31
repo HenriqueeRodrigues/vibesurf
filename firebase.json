@@ -1,10 +1,13 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "apiKey": "AIzaSyByfWRrSSsZ48PRLPUC3YBybDg40PbXE6Y",
+  "authDomain": "vibesurf-e63f3.firebaseapp.com",
+  "projectId": "vibesurf-e63f3",
+  "storageBucket": "vibesurf-e63f3.appspot.com",
+  "messagingSenderId": "328235402575",
+  "appId": "1:328235402575:web:0ff9a0d6fb59274850b13a",
+  "measurementId": "G-KX2E6HSPLP"
 }
