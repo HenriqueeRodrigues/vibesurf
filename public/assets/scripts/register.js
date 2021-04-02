@@ -14,7 +14,7 @@ if (authpage) {
   formAuthRegister.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    
+    hideAlertError(formAuthRegister);
 
     const values = getFormValues(formAuthRegister)
 
@@ -24,13 +24,33 @@ if (authpage) {
       .createUserWithEmailAndPassword(values.register_email, values.register_password)
     .then(response => {
 
+      const { user } = response
+      user.updateProfile({
+        displayName: values.name
+      })
+
+      window.location.href = "/"
+
       console.log("response", response)
     })
-    .catch(err => {
-      console.log('err', err)
-    })
+    .catch(showAlertError(formAuthRegister));
 
     
+  });
+
+  const formAuthLogin = document.querySelector("#conect");
+
+  formAuthLogin.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    hideAlertError(formAuthLogin);
+
+    const values = getFormValues(formAuthLogin);
+
+    auth
+      .signInWithEmailAndPassword(values.email, values.password)
+      .then((response) => (window.location.href = "/"))
+      .catch(showAlertError(formAuthLogin));
   });
 
   
