@@ -1,13 +1,11 @@
-import firebaseConfig from "../../../firebase.json";
-import firebase from "firebase/app";
-import "firebas/login";
-import "firebas/forget";
-import "firebas/register";
+import firebaseConfig from '../../../firebase.json';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
 } else {
-  firebase.app();
+    firebase.app();
 }
 
 export default firebase;
