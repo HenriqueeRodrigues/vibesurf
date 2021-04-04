@@ -61,7 +61,28 @@
         .dow {
             top: 20px;
         }
-        
+        &.logged {
+            nav {
+                ul {
+                    li {
+                        &.divider {
+                            display: flex;
+                        }
+                        &.hide-guest {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+            .footer {
+                > div {
+                    display: flex;
+                }
+                > a.btn-register {
+                    display: none;
+                }
+            }
+        }
         nav {
             flex-direction: column;
             ul {
@@ -80,10 +101,51 @@
                     a {
                         text-decoration: none;
                         color: var(--gray-0);
+                    }                 
+                }
+                &.hide-guest, &.divider {
+                    display: none;
+                }
+            }
+        }
+        .footer {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            > div {
+                display: none;
+                padding: 15px;
+                width: 100%;
+                align-items: center;
+                picture {
+                    margin-right: 10px;
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                    }
+                }
+                > div {
+                    flex-direction: column;
+                    flex: 1;
+                }
+                a {
+                    color: var(--dark-0);
+                    text-decoration: none;
+                    font-size: 16px;
+                    small {
+                        color: var(--gray-2);
+                        font-size: 12px;
                     }
                 }
             }
         }
+        .btn-register {
+            margin: 20px;
+            width: calc(300px - 40px);
+            background-color: blue;
+        }
+    
         div {
             align-self: center;
             .btn-register {

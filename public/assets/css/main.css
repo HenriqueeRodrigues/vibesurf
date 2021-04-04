@@ -263,6 +263,18 @@ hr.divider {
 #header .menu .dow {
   top: 20px;
 }
+#header .menu.logged nav ul li.divider {
+  display: flex;
+}
+#header .menu.logged nav ul li.hide-guest {
+  display: flex;
+}
+#header .menu.logged .footer > div {
+  display: flex;
+}
+#header .menu.logged .footer > a.btn-register {
+  display: none;
+}
 #header .menu nav {
   flex-direction: column;
 }
@@ -284,6 +296,46 @@ hr.divider {
 #header .menu nav ul li a {
   text-decoration: none;
   color: var(--gray-0);
+}
+#header .menu nav ul.hide-guest, #header .menu nav ul.divider {
+  display: none;
+}
+#header .menu .footer {
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#header .menu .footer > div {
+  display: none;
+  padding: 15px;
+  width: 100%;
+  align-items: center;
+}
+#header .menu .footer > div picture {
+  margin-right: 10px;
+}
+#header .menu .footer > div picture img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+#header .menu .footer > div > div {
+  flex-direction: column;
+  flex: 1;
+}
+#header .menu .footer > div a {
+  color: var(--dark-0);
+  text-decoration: none;
+  font-size: 16px;
+}
+#header .menu .footer > div a small {
+  color: var(--gray-2);
+  font-size: 12px;
+}
+#header .menu .btn-register {
+  margin: 20px;
+  width: calc(300px - 40px);
+  background-color: blue;
 }
 #header .menu div {
   align-self: center;

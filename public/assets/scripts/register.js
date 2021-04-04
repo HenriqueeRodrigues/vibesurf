@@ -1,7 +1,39 @@
 import firebase from "./firebase-app";
 import { getFormValues, hideAlertError, showAlertError } from "./utils";
 
-const authpage = document.querySelector("#conect");
+const auth = firebase.auth();
+const authpage = document.querySelector("#conect");;
+const header = document.querySelector('#header .menu')
+const btnLogoff = document.querySelector("#header .menu .footer button");
+
+if(btnLogoff) {
+  btnLogoff.addEventListener('click', e => {
+    auth.signOut().then(() => {
+
+    }).catch(err => console.error(err))
+
+  })
+
+}
+
+if (menu) {
+
+
+  auth.onAuthStateChanged(user => {
+
+    if (user) {
+      const userElement = menu.querySelector(".footer > div > div")
+
+      userElement.querySelector("strong").innerHTML = user.displayName
+      userElement.querySelector("small").innerHTML = user.register_email
+
+     menu.classList.add("logged");
+
+    }else {
+      menu.classList.remove("logged");
+    }
+  })
+}
 
 
 if (authpage) {
