@@ -25,7 +25,7 @@ if (menu) {
       const userElement = menu.querySelector(".footer > div > div")
 
       userElement.querySelector("strong").innerHTML = user.displayName
-      userElement.querySelector("small").innerHTML = user.register_email
+      userElement.querySelector("small").innerHTML = user.email
 
      menu.classList.add("logged");
 

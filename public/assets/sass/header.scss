@@ -62,25 +62,14 @@
             top: 20px;
         }
         &.logged {
-            nav {
-                ul {
-                    li {
-                        &.divider {
-                            display: flex;
-                        }
-                        &.hide-guest {
-                            display: flex;
-                        }
-                    }
-                }
-            }
             .footer {
+                width: 100%;
                 > div {
                     display: flex;
-                }
-                > a.btn-register {
-                    display: none;
-                }
+                } 
+            }
+            .btn-register {
+               display: none;
             }
         }
         nav {
@@ -89,7 +78,7 @@
                 margin: 0;
                 padding: 0;
                 margin-top: 150px;
-                width: 100%;
+                width: 90%;
                 flex-direction: column;
                 max-height: calc(100vh - 250px);
                 overflow-y: auto;
@@ -103,20 +92,19 @@
                         color: var(--gray-0);
                     }                 
                 }
-                &.hide-guest, &.divider {
-                    display: none;
-                }
             }
         }
         .footer {
             flex-direction: column;
             align-items: center;
             width: 100%;
+
             > div {
                 display: none;
                 padding: 15px;
-                width: 100%;
+                width: 75%;
                 align-items: center;
+               
                 picture {
                     margin-right: 10px;
                     img {
@@ -139,11 +127,6 @@
                     }
                 }
             }
-        }
-        .btn-register {
-            margin: 20px;
-            width: calc(300px - 40px);
-            background-color: blue;
         }
     
         div {
@@ -191,6 +174,7 @@
             height: 100vh;
             right: 0;
             
+            
         }
         .logo {
             width: 135px;
@@ -214,6 +198,17 @@
                 width: 100vw;
                 height: 100vh;
                 right: 0;
+                &.logged {
+                    .footer {
+                        width: 100%;
+                        > div {
+                            display: flex;
+                        } 
+                    }
+                    .btn-register {
+                       display: none;
+                    }
+                }
                 nav{
                     
                     li{
@@ -221,18 +216,7 @@
                         font-size: 30px;
                     }
                 }
-                div {
-                    align-self: center;
-                    .btn-register {
-                    display: flex;
-                    text-decoration: none;
-                    font-weight: 600px;
-                    position: relative;
-                    justify-content: center;
-                    @include button-orange;
-                    margin-top: 100px;
-                    }
-                }
+               
                 .sociais {
                     a{
                         margin-top: 40px;
@@ -306,6 +290,15 @@
             flex-direction: row;
             align-items: center;
             padding-bottom: 0;
+            &.logged {
+                
+                .footer {
+                    width: 30%;
+                }     
+                .btn-register {
+                    display: none;
+                 }          
+            }
             
             nav {
                 hr {
@@ -335,14 +328,39 @@
                     }
                 }
             }
+            .footer {
+                > div {
+                    margin-left: -213px;
+                    padding-right: 30px;
+                    margin-bottom: 20px;
+                    width: 60%;
+                    a{
+                        strong{
+                            font-size: 13px;
+                            font-weight: 400;
+                            width: 50%;
+                        }
+                        small {
+                            font-size: 10px;
+                        }
+                    }
+                }
+                button {
+                    width: 35px;
+                    margin-left: 99px;
+                    margin-bottom: 10px;
+                }
+            }
             div {
-                justify-content: flex-end;
-                margin-right: -130px;
+                margin-right: -100px;
+                
                 .btn-register {
                     width: 100px;
                     height: 25px;
                     font-size: 15px;
                     margin:0;
+                    margin-right: -700x;
+                    
                     
                 }
             }
