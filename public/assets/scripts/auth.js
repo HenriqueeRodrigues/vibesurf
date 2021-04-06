@@ -104,15 +104,83 @@ if (authPage) {
       .catch(showAlertError(formAuthLogin));
   });
 
-  document.querySelector("#login .facebook").addEventListener("click", (e) => {
-    const provider = new firebase.auth.FacebookAuthProvider();
+  const formForget = document.querySelector('#forget')
 
-    auth.signInWithRedirect(provider);
-    /*
-        auth
-            .signInWithPopup(provider)
-            .then( window.location.href = "/")
-            .catch(showAlertError(formAuthLogin));
-        */
-  });
+  formForget.addEventListener('submit', e => {
+
+      e.preventDefault()
+
+      const btnSubmit = formForget.querySelector('[type=submit]');
+      const message = formForget.querySelector('.message');
+      const field = formForget.querySelector('.field');
+      const actions = formForget.querySelector('.actions');
+
+      hideAlertError(formForget)
+
+      const values = getFormValues(formForget)
+
+      message.style.display = "none";
+
+      btnSubmit.disabled = true;
+      btnSubmit.innerHTML = "Enviando...";
+
+      auth
+          .sendPasswordResetEmail(values.email)
+          .then(() => {
+
+              field.style.display = 'none';
+              actions.style.display = 'none';
+              message.style.display = "block";
+
+          })
+          .catch(error => {
+
+              field.style.display = 'block';
+              actions.style.display = 'block';
+
+              showAlertError(formForget)(error);
+
+          })
+          .finally(() => {
+
+              btnSubmit.disabled = false;
+              btnSubmit.innerHTML = "Enviar";
+
+          })
+
+  })
+
+  const formReset = document.querySelector('#reset')
+
+  formReset.addEventListener('submit', e => {
+
+      e.preventDefault();
+
+      const btnSubmit = formReset.querySelector('[type=submit]')
+
+      btnSubmit.disabled = true
+      btnSubmit.innerHTML = "Redefinindo...";
+
+      const { oobCode } = getQueryString()
+      const { password } = getFormValues(formReset)
+
+      hideAlertError(formReset)
+
+      auth
+          .verifyPasswordResetCode(oobCode)
+          .then(() => auth.confirmPasswordReset(oobCode, password))
+          .then(() => {
+              hideAuthForms()
+              showAuthForm('login')
+          })
+          .catch(showAlertError(formReset))
+          .finally(() => {
+
+              btnSubmit.disabled = false
+              btnSubmit.innerHTML = "Redefinir";
+
+          })
+
+
+  })
 }
