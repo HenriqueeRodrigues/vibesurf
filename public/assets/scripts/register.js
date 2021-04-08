@@ -1,5 +1,5 @@
 import firebase from "./firebase-app";
-import { getFormValues, hideAlertError, showAlertError } from "./utils";
+import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils";
 
 const auth = firebase.auth();
 const authpage = document.querySelector("#conect");;
@@ -85,5 +85,82 @@ if (authpage) {
       .catch(showAlertError(formAuthLogin));
   });
 
+  const formForget = document.querySelector('#forget')
+
+  formForget.addEventListener('submit', e => {
+
+    e.preventDefault()
+
+    const btnSubmit = formForget.querySelector('[type=submit]');
+    const btnRegisterSend = formForget.querySelector('.registerSend');
+    const message = formForget.querySelector('.message');
+    const field = formForget.querySelector('.field');
+    const actions = formForget.querySelector('.actions');
+
+    hideAlertError(formForget)
+
+    const values = getFormValues(formForget)
+
+    message.style.display = "none";
+
+    btnSubmit.disabled = true;
+    btnSubmit.innerHTML = "Enviando...";
+
+    auth
+      .sendPasswordResetEmail(values.email)
+      .then(() => {
+
+        field.style.display = 'none';
+        actions.style.display = 'none';
+        message.style.display = "flex";
+        btnRegisterSend.style.display = 'none';
+
+      })
+      .catch(error => {
+
+
+        showAlertError(formForget)(error);
+
+      })
+      .finally(() => {
+
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = "Enviar";
+
+      })
+    
+
+  });
+
+  const formReset = document.querySelector("#reset")
+  formReset.addEventListener('submit', e => {
+
+    e.preventDefault();
+
+    const btnSubmit = formReset.querySelector('[type=submit]')
+
+    btnSubmit.disabled = true
+    btnSubmit.innerHTML = "Redefinindo...";
+
+    const { oobCode} = getQueryString()
+    const {password} = getFormValues(formReset)
+
+    hideAlertError(formReset)
+
+    auth.verifyPasswordResetCode(oobCode)
+    .then( () => auth.confirmPasswordReset(oobCode, password))
+    .then(() => {
+      window.location.href = "/"
+    })
+    .catch(showAlertError(formReset))
+    .finally(() => {
+
+      btnSubmit.disabled = true
+      btnSubmit.innerHTML = "Redefinir..."
+    })
+
+  })
+
+  
   
 }

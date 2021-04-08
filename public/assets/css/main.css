@@ -1916,6 +1916,10 @@ hr.divider {
   margin: 10px 0;
   text-decoration: none;
 }
+#conect .contact form .message {
+  font-size: 20px;
+  color: blue;
+}
 
 #about-us .about {
   width: 100%;

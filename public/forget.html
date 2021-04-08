@@ -186,7 +186,7 @@
 
     <main id="conect">
       <section class="contact">
-        <form action="#" class="form">
+        <form id= "forget" action="#" class="form">
           <a href="index.html#home"
             ><img
               src="assets/images/logo/Grupo 267.png"
@@ -196,19 +196,23 @@
           </a>
 
           <div class="field">
-            <input type="email" id="email-forgot" name="email-forgot" />
-            <label for="email-forgot">E-mail</label>
+            <label for="email-forget">E-mail</label>
+            <input type="email" id="email-forgot" name="email" />
+            
           </div>
+          <div class="alert danger"></div>
 
-          <div class="field">
-            <input type="text" id="code_confirm" name="code_confirm" />
-            <label for="code_confirm">Código de e-mail</label>
+          <div class="message" style="display: none" >
+            <span>Foi enviado um email de recuperação de senha. <br>Verifique as intruções no seu e-mail.</span>
           </div>
+          <div class="alert danger"></div>
+
+          <div class="actions"></div>
 
           <div>
-            <button type="submit">Confirmar</button>
+            <button class="registerSend" type="submit">ENVIAR</button>
             <button>
-              <a href="login.html" class="btn-register">Voltar</a>
+              <a href="login.html ">Voltar</a>
             </button>
           </div>
         </form>
