@@ -5,7 +5,7 @@
   "scripts": {
     "sass": "sass --watch public/assets/sass/main.scss:public/assets/css/main.css",
     "sass-build": "sass public/assets/sass/main.scss:public/assets/css/main.css --style=compressed",
-    "buid": "webpack --mode=production",
+    "build": "webpack --mode=production",
     "dev": "webpack serve --content-base public --hot"
   },
   "repository": {
