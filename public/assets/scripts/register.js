@@ -81,7 +81,19 @@ if (authpage) {
 
     auth
       .signInWithEmailAndPassword(values.email, values.password)
-      .then((response) => (window.location.href = "/"))
+      .then((response) => {
+
+        const values = getQueryString()
+        if(values.url) {
+          if(window.location.hostname ==='localhost') {
+            window.location.href = `http://localhost:8080${values.url}`
+          }else {
+            window.location.href = `https://vibesurf-e63f3.web.app${values.url}`
+          }
+        }else {
+          window.location.href = "/"
+        }
+      })
       .catch(showAlertError(formAuthLogin));
   });
 
