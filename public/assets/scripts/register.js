@@ -79,22 +79,24 @@ if (authpage) {
 
     const values = getFormValues(formAuthLogin);
 
-    auth
+    auth  
       .signInWithEmailAndPassword(values.email, values.password)
       .then((response) => {
 
         const values = getQueryString()
-        if(values.url) {
-          if(window.location.hostname ==='localhost') {
-            window.location.href = `http://localhost:8080${values.url}`
-          }else {
-            window.location.href = `https://vibesurf-e63f3.web.app${values.url}`
-          }
-        }else {
-          window.location.href = "/"
+
+        if (values.url) {
+            if (window.location.hostname === 'localhost') {
+                window.location.href = `http://localhost:8080${values.url}`
+            } else {
+                window.location.href = `https://vibesurf-e63f3.web.app${values.url}`
+            }
+        } else {
+            window.location.href = "/"
         }
-      })
-      .catch(showAlertError(formAuthLogin));
+
+    })
+    .catch(showAlertError(formAuthLogin))
   });
 
   const formForget = document.querySelector('#forget')
@@ -144,7 +146,8 @@ if (authpage) {
 
   });
 
-  const formReset = document.querySelector("#reset")
+  const formReset = document.querySelector('#reset')
+
   formReset.addEventListener('submit', e => {
 
     e.preventDefault();
@@ -154,25 +157,28 @@ if (authpage) {
     btnSubmit.disabled = true
     btnSubmit.innerHTML = "Redefinindo...";
 
-    const { oobCode} = getQueryString()
-    const {password} = getFormValues(formReset)
+    const { oobCode } = getQueryString()
+    const { password } = getFormValues(formReset)
 
     hideAlertError(formReset)
 
-    auth.verifyPasswordResetCode(oobCode)
-    .then( () => auth.confirmPasswordReset(oobCode, password))
-    .then(() => {
-      window.location.href = "/"
-    })
-    .catch(showAlertError(formReset))
-    .finally(() => {
+    auth
+      .verifyPasswordResetCode(oobCode)
+      .then(() => auth.confirmPasswordReset(oobCode, password))
+      .then(() => {
+          hideAuthForms()
+          showAuthForm('login')
+      })
+      .catch(showAlertError(formReset))
+      .finally(() => {
 
-      btnSubmit.disabled = false
-      btnSubmit.innerHTML = "Redefinir..."
-    })
+          btnSubmit.disabled = false
+          btnSubmit.innerHTML = "Redefinir";
+
+      })
+
 
   })
-
   
   
 }
