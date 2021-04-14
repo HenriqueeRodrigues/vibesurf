@@ -155,7 +155,7 @@ if (authpage) {
     .catch(showAlertError(formReset))
     .finally(() => {
 
-      btnSubmit.disabled = true
+      btnSubmit.disabled = false
       btnSubmit.innerHTML = "Redefinir..."
     })
 
