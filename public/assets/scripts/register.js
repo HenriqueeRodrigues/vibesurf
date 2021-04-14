@@ -167,7 +167,7 @@ if (authpage) {
       .then(() => auth.confirmPasswordReset(oobCode, password))
       .then(() => {
           hideAuthForms()
-          showAuthForm('login')
+          window.location.href = "/login.html"
       })
       .catch(showAlertError(formReset))
       .finally(() => {
