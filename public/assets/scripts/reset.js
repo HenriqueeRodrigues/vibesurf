@@ -31,12 +31,12 @@ if (authpage2) {
         .then(() => auth.confirmPasswordReset(oobCode, password))
         .then(() => {
             hideAuthForms()
-            window.location.href = "/login.html#"
+            window.location.href = "/login.html"
         })
         .catch(showAlertError(formReset))
         .finally(() => {
 
-            btnSubmit.disabled = false
+            btnSubmit.disabled = true
             btnSubmit.innerHTML = "Redefinir";
 
         })
