@@ -2,7 +2,9 @@ import firebase from "./firebase-app";
 import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
 
 const auth = firebase.auth();
-const authpage = document.querySelector("#conect");;
+const authpage = document.querySelector("#conect");
+const authpage2 = document.querySelector("#resetpassword");
+
 const header = document.querySelector('#header .menu')
 const btnLogoff = document.querySelector("#header .menu .footer button");
 
@@ -36,9 +38,9 @@ if (menu) {
 }
 
 console.log("ants do if")
-if (authpage) {
- 
-  console.log("após do if")
+if (authpage2) {
+  console.log("ants do if")
+  /*console.log("após do if")
   const auth = firebase.auth();
 
 
@@ -98,7 +100,7 @@ if (authpage) {
 
     })
     .catch(showAlertError(formAuthLogin))
-  });
+  }); */
 
   const formForget = document.querySelector('#forget')
   if(formForget) {
