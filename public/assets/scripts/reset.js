@@ -32,7 +32,7 @@ if (authpage2) {
         .then(() => auth.confirmPasswordReset(oobCode, password))
         .then(() => {
             hideAuthForms()
-            window.location.href = "/#home"
+            window.location.href = "/login.html"
         })
         .catch(showAlertError(formReset))
         .finally(() => {
