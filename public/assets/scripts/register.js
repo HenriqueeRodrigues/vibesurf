@@ -39,7 +39,7 @@ if (menu) {
 
 console.log("ants do if")
 if (authpage2) {
-  console.log("ants do if")
+  console.log("chegueeei do if")
   /*console.log("após do if")
   const auth = firebase.auth();
 

@@ -8,7 +8,7 @@ const btnLogoff = document.querySelector("#header .menu .footer button");
 
 if (authpagesing) {
  
-    console.log("após do if")
+    
     const auth = firebase.auth();
 
     const formAuthLogin = document.querySelector("#conect");

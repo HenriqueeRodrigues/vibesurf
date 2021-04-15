@@ -8,36 +8,39 @@ const authpage2 = document.querySelector("#resetpassword");
 const header = document.querySelector('#header .menu')
 const btnLogoff = document.querySelector("#header .menu .footer button");
 
-const formReset = document.querySelector('#reset')
-  console.log(formReset)
-  formReset.addEventListener('submit', e => {
+if (authpage2) {
 
-    e.preventDefault();
+    const formReset = document.querySelector('#reset')
+    console.log(formReset)
+    formReset.addEventListener('submit', e => {
 
-    const btnSubmit = formReset.querySelector('[type=submit]')
+        e.preventDefault();
 
-    btnSubmit.disabled = true
-    btnSubmit.innerHTML = "Redefinindo...";
+        const btnSubmit = formReset.querySelector('[type=submit]')
 
-    const { oobCode } = getQueryString()
-    const { password } = getFormValues(formReset)
+        btnSubmit.disabled = true
+        btnSubmit.innerHTML = "Redefinindo...";
 
-    hideAlertError(formReset)
-    console.log(oobCode)
-    auth
-      .verifyPasswordResetCode(oobCode)
-      .then(() => auth.confirmPasswordReset(oobCode, password))
-      .then(() => {
-          hideAuthForms()
-          window.location.href = "/login.html#"
-      })
-      .catch(showAlertError(formReset))
-      .finally(() => {
+        const { oobCode } = getQueryString()
+        const { password } = getFormValues(formReset)
 
-          btnSubmit.disabled = false
-          btnSubmit.innerHTML = "Redefinir";
+        hideAlertError(formReset)
+        console.log(oobCode)
+        auth
+        .verifyPasswordResetCode(oobCode)
+        .then(() => auth.confirmPasswordReset(oobCode, password))
+        .then(() => {
+            hideAuthForms()
+            window.location.href = "/login.html#"
+        })
+        .catch(showAlertError(formReset))
+        .finally(() => {
 
-      })
+            btnSubmit.disabled = false
+            btnSubmit.innerHTML = "Redefinir";
+
+        })
 
 
-  })
+    })
+}
