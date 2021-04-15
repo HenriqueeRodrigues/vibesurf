@@ -36,7 +36,7 @@ if (authpage2) {
             .then(() => {
                 console.log("Cheguei no 2 then")
                 hideAuthForms()
-                window.location.href = "/login.html"
+                window.location.href = `https://vibesurf-e63f3.web.app/login.html`
             })
             .catch(showAlertError(formReset))
             .finally(() => {
