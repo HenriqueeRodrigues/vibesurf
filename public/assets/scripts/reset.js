@@ -30,7 +30,9 @@ if (authpage2) {
         auth
         .verifyPasswordResetCode(oobCode)
         .then(() => auth.confirmPasswordReset(oobCode, password))
+        console.log("Cheguei no 1º Then")
         .then(() => {
+            console.log("Cheguei no 2º Then")
             hideAuthForms()
             window.location.href = "/login.html"
         })
@@ -38,9 +40,10 @@ if (authpage2) {
         .finally(() => {
             btnSubmit.disabled = false
             btnSubmit.innerHTML = "Redefinir";
+            console.log("Cheguei no Finaly")
 
         })
-
+        console.log("Cheguei no Final de tudo")
 
     })
 }
