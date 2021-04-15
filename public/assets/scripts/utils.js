@@ -76,15 +76,21 @@ export function getFormValues(form) {
 
 export function hideAlertError(form) {
   const alertElement = form.querySelector(".alert.danger");
-
-  alertElement.style.display = "none";
+ if(alertElement) 
+ {
+  alertElement.style.display = "none";  
+ }
+ 
 }
 
 export function showAlertError(form) {
   return (error) => {
     const alertElement = form.querySelector(".alert.danger");
-
+    if(alertElement) 
+  {
     alertElement.innerHTML = error.message;
     alertElement.style.display = "block";
+  }
+
   };
 }
