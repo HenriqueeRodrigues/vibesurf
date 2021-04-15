@@ -29,21 +29,27 @@ if (authpage2) {
         console.log(oobCode)
         auth
         .verifyPasswordResetCode(oobCode)
-        .then(() => auth.confirmPasswordReset(oobCode, password))
-        console.log("Cheguei no 1º Then")
         .then(() => {
-            console.log("Cheguei no 2º Then")
-            hideAuthForms()
-            window.location.href = "/login.html"
-        })
-        .catch(showAlertError(formReset))
-        .finally(() => {
-            btnSubmit.disabled = false
-            btnSubmit.innerHTML = "Redefinir";
-            console.log("Cheguei no Finaly")
 
+            auth
+            .confirmPasswordReset(oobCode, password)
+            .then(() => {
+                console.log("Cheguei no 2 then")
+                hideAuthForms()
+                window.location.href = "/login.html"
+            })
+            .catch(showAlertError(formReset))
+            .finally(() => {
+                btnSubmit.disabled = false
+                btnSubmit.innerHTML = "Redefinir";
+                console.log("Cheguei no Finaly")
+
+            })
+            console.log("Cheguei no Final de tu")
+        
         })
-        console.log("Cheguei no Final de tudo")
+        
+        
 
     })
 }
