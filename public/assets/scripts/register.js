@@ -146,7 +146,8 @@ if (authpage) {
 
   });
 
-  const formReset = document.querySelector('#reset')
+
+  /*const formReset = document.querySelector('#reset')
 
   formReset.addEventListener('submit', e => {
 
@@ -167,7 +168,7 @@ if (authpage) {
       .then(() => auth.confirmPasswordReset(oobCode, password))
       .then(() => {
           hideAuthForms()
-          window.location.href = "/login.html"
+          window.location.href = "/login.html#"
       })
       .catch(showAlertError(formReset))
       .finally(() => {
@@ -178,7 +179,7 @@ if (authpage) {
       })
 
 
-  })
+  })*/
   
   
 }
