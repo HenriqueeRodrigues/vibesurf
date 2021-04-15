@@ -10,6 +10,18 @@ const btnLogoff = document.querySelector("#header .menu .footer button");
 
 if (authpage2) {
 
+
+    const hideAuthForms = () => {
+        document
+          .querySelectorAll("#auth form")
+          .forEach((el) => el.classList.add("hide"));
+    };
+
+    const showAuthForm = (id) => {
+        document.getElementById(id).classList.remove("hide");
+    };
+    
+
     const formReset = document.querySelector('#reset')
     console.log(formReset)
     formReset.addEventListener('submit', e => {
@@ -36,7 +48,7 @@ if (authpage2) {
             .then(() => {
                 console.log("Cheguei no 2 then")
                 hideAuthForms()
-                window.location.href = `https://vibesurf-e63f3.web.app/login.html`
+                showAuthForm('login')
             })
             .catch(showAlertError(formReset))
             .finally(() => {
