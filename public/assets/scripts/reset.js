@@ -23,6 +23,7 @@ if (authpage2) {
 
         const { oobCode } = getQueryString()
         const { password } = getFormValues(formReset)
+      
 
         hideAlertError(formReset)
         console.log(oobCode)
@@ -31,12 +32,11 @@ if (authpage2) {
         .then(() => auth.confirmPasswordReset(oobCode, password))
         .then(() => {
             hideAuthForms()
-            window.location.href = "/login.html"
+            window.location.href = "/#home"
         })
         .catch(showAlertError(formReset))
         .finally(() => {
-
-            btnSubmit.disabled = true
+            btnSubmit.disabled = false
             btnSubmit.innerHTML = "Redefinir";
 
         })
