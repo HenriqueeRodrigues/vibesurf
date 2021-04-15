@@ -1,6 +1,13 @@
 import firebase from "./firebase-app";
 import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
 
+const auth = firebase.auth();
+const authpage = document.querySelector("#conect");
+const authpage2 = document.querySelector("#resetpassword");
+
+const header = document.querySelector('#header .menu')
+const btnLogoff = document.querySelector("#header .menu .footer button");
+
 const formReset = document.querySelector('#reset')
   console.log(formReset)
   formReset.addEventListener('submit', e => {
