@@ -45,12 +45,10 @@ if (authpage2) {
             .finally(() => {
                 btnSubmit.disabled = false
                 btnSubmit.innerHTML = "Redefinir";
-                showAlertError("ShowalertSenha foi alterada com Sucesso")
                 alert("Senha alterada com Sucesso")
 
             })
-            showAlertError("ShowalertSenha foi alterada com Sucesso")
-                alert("Senha alterada com Sucesso")
+                
         })
     })
 }

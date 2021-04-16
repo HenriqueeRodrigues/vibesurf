@@ -18,6 +18,9 @@
         justify-content: center;
         align-items: center;
         top: 15px;
+        h1{
+            color:dimgray;
+        }
         .page-title {
             width: 100vw;
             height: 50px;
@@ -87,7 +90,7 @@
             
             form {
                 button {
-                    margin-top: 70px;
+                    margin-top: 10px;
                     margin-left: 10px;
                 }
             }

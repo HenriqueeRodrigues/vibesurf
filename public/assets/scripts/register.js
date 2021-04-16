@@ -37,6 +37,16 @@ if (menu) {
 
 if (authpage2) {
   
+  const email = authpagelogin.document("#email")
+  const register_email = authpagelogin.document("#register_email")
+
+
+  new IMask(email,{
+  mask: 'exemplo@dominio.com'
+  }) 
+  new IMask(register_email,{
+  mask: 'exemplo@dominio.com'
+  }) 
   const formForget = document.querySelector('#forget')
   if(formForget) {
     formForget.addEventListener('submit', e => {

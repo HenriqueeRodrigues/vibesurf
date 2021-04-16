@@ -20,6 +20,7 @@
   "homepage": "https://github.com/HenriqueeRodrigues/vibesurf.git",
   "dependencies": {
     "firebase": "^8.3.1",
+    "imask": "^6.0.7",
     "sass": "^1.27.0"
   },
   "devDependencies": {

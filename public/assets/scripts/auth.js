@@ -3,8 +3,6 @@ import { getFormValues, getQueryString, hideAlertError, showAlertError } from ".
 
 const auth = firebase.auth();
 const authpagesing = document.querySelector("#conect");;
-const header = document.querySelector('#header .menu')
-const btnLogoff = document.querySelector("#header .menu .footer button");
 
 if (authpagesing) {
  

@@ -1,10 +1,11 @@
 import firebase from "./firebase-app";
-import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
+import { getFormValues, hideAlertError, showAlertError } from "./utils"; 
+import IMask from 'imask'
+
 
 const auth = firebase.auth();
-const authpagelogin = document.querySelector("#conect");;
-const header = document.querySelector('#header .menu')
-const btnLogoff = document.querySelector("#header .menu .footer button");
+const authpagelogin = document.querySelector("#conect");
+
 
 if (authpagelogin) {
  
