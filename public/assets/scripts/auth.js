@@ -1,8 +1,21 @@
 import firebase from "./firebase-app";
+import IMask from "imask"
 import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
 
 const auth = firebase.auth();
 const authpagesing = document.querySelector("#conect");;
+
+
+/*const email = authpagelogin.document("#email")
+const register_email = authpagelogin.document("#register_email")
+
+
+new IMask(email,{
+mask: 'exemplo@dominio.com'
+}) 
+new IMask(register_email,{
+mask: 'exemplo@dominio.com'
+})*/
 
 if (authpagesing) {
  
