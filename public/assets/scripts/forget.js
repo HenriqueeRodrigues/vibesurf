@@ -8,12 +8,7 @@ const authpage2 = document.querySelector("#resetpassword");
 const header = document.querySelector('#header .menu')
 const btnLogoff = document.querySelector("#header .menu .footer button");
 
-
-
-console.log("ants do if")
 if (authpage) {
-  console.log("chegueeei do if forget")
-  
 
   const formForget = document.querySelector('#forget')
   if(formForget) {
@@ -37,31 +32,25 @@ if (authpage) {
       btnSubmit.innerHTML = "Enviando...";
   
       auth
-        .sendPasswordResetEmail(values.email)
-        .then(() => {
-  
-          field.style.display = 'none';
-          actions.style.display = 'none';
-          message.style.display = "flex";
-          btnRegisterSend.style.display = 'none';
-  
+    .sendPasswordResetEmail(values.email)
+    .then(() => {
+
+        field.style.display = 'none';
+        actions.style.display = 'none';
+        message.style.display = "flex";
+        btnRegisterSend.style.display = 'none';
+
+    })
+    .catch(error => {
+
+        showAlertError(formForget)(error);
+    })
+    .finally(() => {
+
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = "Enviar";
+
         })
-        .catch(error => {
-  
-  
-          showAlertError(formForget)(error);
-  
-        })
-        .finally(() => {
-  
-          btnSubmit.disabled = false;
-          btnSubmit.innerHTML = "Enviar";
-  
-        })
-      
-  
     });
-  
   }
-  
 }

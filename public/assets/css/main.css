@@ -1901,7 +1901,7 @@ hr.divider {
   }
 }
 #conect .contact form {
-  max-width: 900px;
+  max-width: 800px;
   top: -70px;
 }
 #conect .contact form img {
@@ -2126,6 +2126,29 @@ hr.divider {
   #error section div {
     width: 28%;
   }
+}
+#resetpassword {
+  width: 100%;
+  height: 750px;
+  min-width: 320px;
+  background-image: url("../images/baners/produtos.webp");
+  background-size: cover;
+  background-position-x: 19%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space);
+  position: relative;
+  margin-top: -90px;
+}
+#resetpassword .contact {
+  width: 50%;
+  flex-direction: row;
+}
+#resetpassword .contact h1 {
+  color: dimgray;
 }
 
 /*# sourceMappingURL=main.css.map */

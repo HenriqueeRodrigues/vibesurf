@@ -2,11 +2,7 @@ import firebase from "./firebase-app";
 import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
 
 const auth = firebase.auth();
-const authpage = document.querySelector("#conect");
 const authpage2 = document.querySelector("#resetpassword");
-
-const header = document.querySelector('#header .menu')
-const btnLogoff = document.querySelector("#header .menu .footer button");
 
 if (authpage2) {
 
@@ -16,11 +12,6 @@ if (authpage2) {
           .querySelectorAll("#auth form")
           .forEach((el) => el.classList.add("hide"));
     };
-
-    const showAuthForm = (id) => {
-        document.getElementById(id).classList.remove("hide");
-    };
-    
 
     const formReset = document.querySelector('#reset')
     console.log(formReset)
@@ -46,22 +37,17 @@ if (authpage2) {
             auth
             .confirmPasswordReset(oobCode, password)
             .then(() => {
-                console.log("Cheguei no 2 then")
                 hideAuthForms()
                 window.location.href = "/login.html"
+                alert("Uhul deu certo")
             })
             .catch(showAlertError(formReset))
             .finally(() => {
                 btnSubmit.disabled = false
                 btnSubmit.innerHTML = "Redefinir";
-                console.log("Cheguei no Finaly")
+                alert("Senha alterada com Sucesso")
 
             })
-            console.log("Cheguei no Final de tu")
-        
         })
-        
-        
-
     })
 }

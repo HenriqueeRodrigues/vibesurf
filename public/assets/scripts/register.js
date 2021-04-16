@@ -2,7 +2,6 @@ import firebase from "./firebase-app";
 import { getFormValues, getQueryString, hideAlertError, showAlertError } from "./utils"; 
 
 const auth = firebase.auth();
-const authpage = document.querySelector("#conect");
 const authpage2 = document.querySelector("#resetpassword");
 
 const header = document.querySelector('#header .menu')
@@ -20,88 +19,24 @@ if(btnLogoff) {
 
 if (menu) {
 
-
   auth.onAuthStateChanged(user => {
 
     if (user) {
       const userElement = menu.querySelector(".footer > div > div")
-
-      userElement.querySelector("strong").innerHTML = user.displayName
-      userElement.querySelector("small").innerHTML = user.email
+      
+      userElement.querySelector("strong").innerHTML = user.displayName;
+      userElement.querySelector("small").innerHTML = user.email;
 
      menu.classList.add("logged");
-
+     
     }else {
       menu.classList.remove("logged");
     }
   })
 }
 
-console.log("ants do if")
 if (authpage2) {
-  console.log("chegueeei do if")
-  /*console.log("após do if")
-  const auth = firebase.auth();
-
-
-  const formAuthRegister = document.querySelector("#conect");
-
-  formAuthRegister.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    hideAlertError(formAuthRegister);
-
-    const values = getFormValues(formAuthRegister)
-
-    console.log(values)
-
-    auth
-      .createUserWithEmailAndPassword(values.register_email, values.register_password)
-    .then(response => {
-
-      const { user } = response
-      user.updateProfile({
-        displayName: values.name
-      })
-
-      window.location.href = "/"
-
-      console.log("response", response)
-    })
-    .catch(showAlertError(formAuthRegister));
-
-    
-  });
-
-  const formAuthLogin = document.querySelector("#conect");
-
-  formAuthLogin.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    hideAlertError(formAuthLogin);
-
-    const values = getFormValues(formAuthLogin);
-
-    auth  
-      .signInWithEmailAndPassword(values.email, values.password)
-      .then((response) => {
-
-        const values = getQueryString()
-
-        if (values.url) {
-            if (window.location.hostname === 'localhost') {
-                window.location.href = `http://localhost:8080${values.url}`
-            } else {
-                window.location.href = `https://vibesurf-e63f3.web.app${values.url}`
-            }
-        } else {
-            window.location.href = "/"
-        }
-
-    })
-    .catch(showAlertError(formAuthLogin))
-  }); */
-
+  
   const formForget = document.querySelector('#forget')
   if(formForget) {
     formForget.addEventListener('submit', e => {
@@ -124,31 +59,27 @@ if (authpage2) {
       btnSubmit.innerHTML = "Enviando...";
   
       auth
-        .sendPasswordResetEmail(values.email)
-        .then(() => {
-  
-          field.style.display = 'none';
-          actions.style.display = 'none';
-          message.style.display = "flex";
-          btnRegisterSend.style.display = 'none';
-  
-        })
-        .catch(error => {
-  
-  
-          showAlertError(formForget)(error);
-  
-        })
-        .finally(() => {
-  
-          btnSubmit.disabled = false;
-          btnSubmit.innerHTML = "Enviar";
-  
-        })
+      .sendPasswordResetEmail(values.email)
+      .then(() => {
+
+        field.style.display = 'none';
+        actions.style.display = 'none';
+        message.style.display = "flex";
+        btnRegisterSend.style.display = 'none';
+
+      })
+      .catch(error => {
+
+        showAlertError(formForget)(error);
+
+      })
+      .finally(() => {
+
+        btnSubmit.disabled = false;
+        btnSubmit.innerHTML = "Enviar";
+
+      })
       
-  
     });
-  
   }
-  
 }
