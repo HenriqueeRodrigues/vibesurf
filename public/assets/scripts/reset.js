@@ -39,13 +39,14 @@ if (authpage2) {
             .then(() => {
                 hideAuthForms()
                 window.location.href = "/login.html"
+                showAlertError("Senha foi alterada com Sucesso")
+                alert("Senha alterada com Sucesso")
             })
             .catch(showAlertError(formReset))
             .finally(() => {
                 btnSubmit.disabled = false
                 btnSubmit.innerHTML = "Redefinir";
-                //showAlertError("Senha alterada com Sucesso")
-                alert("Senha alterada com Sucesso")
+              
 
             })
         })
