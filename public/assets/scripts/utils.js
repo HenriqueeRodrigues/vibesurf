@@ -87,10 +87,10 @@ export function showAlertError(form) {
   return (error) => {
     const alertElement = form.querySelector(".alert.danger");
     if(alertElement) 
-  {
-    alertElement.innerHTML = error.message;
-    alertElement.style.display = "block";
-  }
+ {
+  alertElement.innerHTML = error.message;
+  alertElement.style.display = "block";
+ }
 
   };
 }

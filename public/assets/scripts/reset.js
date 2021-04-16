@@ -44,7 +44,8 @@ if (authpage2) {
             .finally(() => {
                 btnSubmit.disabled = false
                 btnSubmit.innerHTML = "Redefinir";
-                showAlertErroralert("Senha alterada com Sucesso")
+                //showAlertError("Senha alterada com Sucesso")
+                alert("Senha alterada com Sucesso")
 
             })
         })
